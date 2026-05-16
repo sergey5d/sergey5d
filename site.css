@@ -283,8 +283,6 @@ main { flex: 1 0 auto; padding: var(--space-12) 0 var(--space-16); }
   margin: 0 0 var(--space-4);
   text-wrap: balance;
 }
-.page-head .title::before { content: '$ '; color: var(--accent-600); }
-
 .page-head .title em {
   font-style: normal;
   color: var(--accent-500);
