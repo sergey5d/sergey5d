@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Alex Rivera</title>
+  <link rel="stylesheet" href="site.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" data-screen-label="Header">
+  <div class="shell">
+    <a href="index.html" class="wordmark" aria-label="Home">
+      <span class="dot"></span>
+      <span>Alex Rivera</span>
+      <span class="handle">~/arivera</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="is-active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main data-screen-label="Contact">
+  <div class="shell">
+
+    <div class="page-head">
+      <div class="eyebrow">// contact</div>
+      <h1 class="title">The best way to reach me is, <em>honestly</em>, email.</h1>
+      <p class="lede">I read every message and reply to most of them within a week. Recruiters: I'm not
+        looking, but I'll still answer politely. Cold pitches for "AI-powered" tooling: please don't.</p>
+    </div>
+
+    <ul class="contact-list">
+
+      <li>
+        <span class="channel">Email</span>
+        <span class="value"><a class="link" href="mailto:alex@rivera.dev">alex@rivera.dev</a></span>
+        <button class="copy-btn" data-copy="alex@rivera.dev">copy</button>
+      </li>
+
+      <li>
+        <span class="channel">GitHub</span>
+        <span class="value"><a class="link" href="https://github.com/arivera" target="_blank" rel="noreferrer">github.com/arivera</a></span>
+        <a class="copy-btn" href="https://github.com/arivera" target="_blank" rel="noreferrer">open ↗</a>
+      </li>
+
+      <li>
+        <span class="channel">Bluesky</span>
+        <span class="value"><a class="link" href="https://bsky.app/profile/arivera.dev" target="_blank" rel="noreferrer">@arivera.dev</a></span>
+        <a class="copy-btn" href="https://bsky.app/profile/arivera.dev" target="_blank" rel="noreferrer">open ↗</a>
+      </li>
+
+      <li>
+        <span class="channel">LinkedIn</span>
+        <span class="value"><a class="link" href="https://linkedin.com/in/arivera" target="_blank" rel="noreferrer">in/arivera</a></span>
+        <a class="copy-btn" href="https://linkedin.com/in/arivera" target="_blank" rel="noreferrer">open ↗</a>
+      </li>
+
+      <li>
+        <span class="channel">PGP</span>
+        <span class="value"><span class="mono">9F4A · 21CB · 7E0D · B842</span></span>
+        <button class="copy-btn" data-copy="9F4A 21CB 7E0D B842">copy</button>
+      </li>
+
+      <li>
+        <span class="channel">Mailing list</span>
+        <span class="value"><a class="link" href="#">letterhash · archive</a></span>
+        <span class="copy-btn" style="cursor:default;">paused</span>
+      </li>
+
+    </ul>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="label">// office hours</span>
+        <h2>Coffee &amp; chat</h2>
+      </div>
+
+      <div class="prose">
+        <p>If you're a junior engineer figuring out distributed systems, an early-career manager wondering
+        if you made a mistake, or someone working on something interesting in payments — I keep two open
+        slots a week for short calls. No fee, no agenda.</p>
+        <p>Send me an email with one or two sentences about what you're working on and what you're stuck
+        on. I'll send a link back. <a href="mailto:alex@rivera.dev?subject=Office%20hours">Email me</a>.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <span class="colophon">© 2026 · built quietly in berlin</span>
+    <div class="links">
+      <a href="https://github.com/" target="_blank" rel="noreferrer">github</a>
+      <a href="https://bsky.app/" target="_blank" rel="noreferrer">bluesky</a>
+      <a href="mailto:alex@rivera.dev">email</a>
+      <a href="index.html">home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  // Tiny copy-to-clipboard for buttons with data-copy
+  document.querySelectorAll('button.copy-btn[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = btn.getAttribute('data-copy');
+      try {
+        await navigator.clipboard.writeText(text);
+        const original = btn.textContent;
+        btn.textContent = 'copied';
+        btn.classList.add('is-copied');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('is-copied');
+        }, 1400);
+      } catch (e) {
+        btn.textContent = 'select & copy';
+      }
+    });
+  });
+</script>
+</body>
+</html>

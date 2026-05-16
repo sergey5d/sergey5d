@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Alex Rivera</title>
+  <link rel="stylesheet" href="site.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" data-screen-label="Header">
+  <div class="shell">
+    <a href="index.html" class="wordmark" aria-label="Home">
+      <span class="dot"></span>
+      <span>Alex Rivera</span>
+      <span class="handle">~/arivera</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html" class="is-active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main data-screen-label="Blog">
+  <div class="shell">
+
+    <div class="page-head">
+      <div class="eyebrow">// writing</div>
+      <h1 class="title">Notes on the parts of <em>engineering</em> that don't fit in a commit message.</h1>
+      <p class="lede">Mostly distributed systems, databases, and the social half of building software.
+        I write when I have something to say, not on a schedule. <a class="link" href="#">RSS</a>.</p>
+    </div>
+
+    <section class="section" style="margin-top: var(--space-8);">
+      <div class="section-head">
+        <span class="label">// 2026</span>
+        <h2>Recent</h2>
+        <span class="count tnum">5 posts</span>
+      </div>
+
+      <ul class="log">
+        <li>
+          <span class="when tnum">14 May 2026</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">Notes on idempotency keys that won't haunt you</a>
+            <span class="excerpt">Most retry bugs come from idempotency that's almost-but-not-quite right. A short field guide drawn from four years of payments work.</span>
+          </div>
+          <span class="kind">9 min</span>
+        </li>
+        <li>
+          <span class="when tnum">18 Apr 2026</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">The case for boring databases</a>
+            <span class="excerpt">Why "just use Postgres" is rarely the wrong answer, and the three specific times it actually is.</span>
+          </div>
+          <span class="kind">7 min</span>
+        </li>
+        <li>
+          <span class="when tnum">29 Mar 2026</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">A small theory of on-call</a>
+            <span class="excerpt">Pages should teach you something. If they don't, the runbook is doing the wrong job.</span>
+          </div>
+          <span class="kind">5 min</span>
+        </li>
+        <li>
+          <span class="when tnum">22 Feb 2026</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">Reading code is a skill nobody teaches</a>
+            <span class="excerpt">On the underrated discipline of sitting with a foreign codebase until it makes sense.</span>
+          </div>
+          <span class="kind">6 min</span>
+        </li>
+        <li>
+          <span class="when tnum">14 Jan 2026</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">Migrating a billion rows without anyone noticing</a>
+            <span class="excerpt">The expand–contract pattern, but applied to a column type change on a hot table.</span>
+          </div>
+          <span class="kind">11 min</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="label">// 2025</span>
+        <h2>Earlier</h2>
+        <span class="count tnum">6 posts</span>
+      </div>
+
+      <ul class="log">
+        <li>
+          <span class="when tnum">12 Nov 2025</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">I deleted my dotfiles repo and feel fine</a>
+            <span class="excerpt">A short defense of the unconfigured terminal. Or: how I learned to stop tweaking and ship the work.</span>
+          </div>
+          <span class="kind">4 min</span>
+        </li>
+        <li>
+          <span class="when tnum">02 Oct 2025</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">A taxonomy of feature flags</a>
+            <span class="excerpt">Operational, experimental, permission, kill-switch. Four flavors, three of them dangerous if you confuse them.</span>
+          </div>
+          <span class="kind">8 min</span>
+        </li>
+        <li>
+          <span class="when tnum">16 Aug 2025</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">Designing for the 3am engineer</a>
+            <span class="excerpt">Error messages, dashboards, and the underrated kindness of timestamps in UTC.</span>
+          </div>
+          <span class="kind">6 min</span>
+        </li>
+        <li>
+          <span class="when tnum">24 Jun 2025</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">Why I write postmortems for things that didn't break</a>
+            <span class="excerpt">Near-misses teach more than incidents. The structure of a "we got lucky" review.</span>
+          </div>
+          <span class="kind">5 min</span>
+        </li>
+        <li>
+          <span class="when tnum">11 May 2025</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">The performance review I wish I'd given my first manager</a>
+            <span class="excerpt">A non-bitter, slightly-edited essay about feedback I gave too late.</span>
+          </div>
+          <span class="kind">7 min</span>
+        </li>
+        <li>
+          <span class="when tnum">03 Feb 2025</span>
+          <div class="what">
+            <a href="blog-post-sample.html" class="title">Stop reaching for Kafka first</a>
+            <span class="excerpt">An outbox table and a worker get you 80% of what you wanted, with one fewer thing to operate.</span>
+          </div>
+          <span class="kind">10 min</span>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <span class="colophon">© 2026 · built quietly in berlin</span>
+    <div class="links">
+      <a href="https://github.com/" target="_blank" rel="noreferrer">github</a>
+      <a href="https://bsky.app/" target="_blank" rel="noreferrer">bluesky</a>
+      <a href="mailto:alex@rivera.dev">email</a>
+      <a href="contact.html">more →</a>
+    </div>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

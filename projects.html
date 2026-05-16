@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Alex Rivera</title>
+  <link rel="stylesheet" href="site.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" data-screen-label="Header">
+  <div class="shell">
+    <a href="index.html" class="wordmark" aria-label="Home">
+      <span class="dot"></span>
+      <span>Alex Rivera</span>
+      <span class="handle">~/arivera</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="is-active">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main data-screen-label="Projects">
+  <div class="shell">
+
+    <div class="page-head">
+      <div class="eyebrow">// projects</div>
+      <h1 class="title">Things I've <em>built</em>, broken, and occasionally finished.</h1>
+      <p class="lede">A working ledger of side projects, open-source tools, and a few client jobs that
+        survived to production. Status is honest — if it says archived, it's archived.</p>
+    </div>
+
+    <ul class="projects">
+
+      <li>
+        <div class="left">
+          <div class="proj-head">
+            <div class="name"><a href="#">pgshift</a></div>
+            <span class="year tnum">2024 — present</span>
+          </div>
+          <p class="proj-desc">An ergonomic CLI for zero-downtime Postgres schema changes. Online type
+            conversions, expand–contract migrations, partial backfills with bounded write amplification.
+            Used in production by three companies I know of and probably a few I don't.</p>
+          <div class="proj-meta">
+            <span class="badge live">live</span>
+            <div class="chips">
+              <span class="chip">rust</span>
+              <span class="chip">postgres</span>
+              <span class="chip">cli</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
+          <a href="#" class="icon-link" aria-label="Docs" title="docs"><i data-lucide="external-link"></i></a>
+        </div>
+      </li>
+
+      <li>
+        <div class="left">
+          <div class="proj-head">
+            <div class="name"><a href="#">slowloop</a></div>
+            <span class="year tnum">2025</span>
+          </div>
+          <p class="proj-desc">A tiny job runner that makes "run this every Tuesday at 3am, but not if
+            it's a holiday in Frankfurt" the boring sentence it should always have been. ~600 lines of Go.</p>
+          <div class="proj-meta">
+            <span class="badge shipped">shipped</span>
+            <div class="chips">
+              <span class="chip">go</span>
+              <span class="chip">cron</span>
+              <span class="chip">sqlite</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
+        </div>
+      </li>
+
+      <li>
+        <div class="left">
+          <div class="proj-head">
+            <div class="name"><a href="#">strange loop 2026 — settlement at 100x</a></div>
+            <span class="year tnum">Mar 2026</span>
+          </div>
+          <p class="proj-desc">Conference talk on how we rebuilt a payments settlement pipeline to handle a
+            hundredfold increase in volume without rewriting the surrounding 12 services. Slides, recording,
+            and the chart I'm still mildly embarrassed about.</p>
+          <div class="proj-meta">
+            <span class="badge shipped">shipped</span>
+            <div class="chips">
+              <span class="chip">talk</span>
+              <span class="chip">distributed-systems</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="#" class="icon-link" aria-label="Slides" title="slides"><i data-lucide="file-text"></i></a>
+          <a href="#" class="icon-link" aria-label="Recording" title="recording"><i data-lucide="play"></i></a>
+        </div>
+      </li>
+
+      <li>
+        <div class="left">
+          <div class="proj-head">
+            <div class="name"><a href="#">tinytrace</a></div>
+            <span class="year tnum">2025</span>
+          </div>
+          <p class="proj-desc">An opinionated tracing wrapper for small teams who don't want to host an
+            OTel collector. Stores spans in Postgres, ships a small browser UI for searching them.
+            Single static binary. Not the right tool for big shops; perfect for everyone else.</p>
+          <div class="proj-meta">
+            <span class="badge in-progress">in progress</span>
+            <div class="chips">
+              <span class="chip">rust</span>
+              <span class="chip">otel</span>
+              <span class="chip">observability</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
+        </div>
+      </li>
+
+      <li>
+        <div class="left">
+          <div class="proj-head">
+            <div class="name"><a href="#">letterhash</a></div>
+            <span class="year tnum">2023</span>
+          </div>
+          <p class="proj-desc">A weekly newsletter on infrastructure failures, postmortem culture, and
+            the boring parts of reliability engineering. Ran for 18 months and 64 issues before I needed
+            my weekends back. Archive still online.</p>
+          <div class="proj-meta">
+            <span class="badge archived">archived</span>
+            <div class="chips">
+              <span class="chip">writing</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="#" class="icon-link" aria-label="Archive" title="archive"><i data-lucide="archive"></i></a>
+        </div>
+      </li>
+
+      <li>
+        <div class="left">
+          <div class="proj-head">
+            <div class="name"><a href="#">cassette.fm</a></div>
+            <span class="year tnum">2022</span>
+          </div>
+          <p class="proj-desc">A side project that turned into the kind of personal music player I always
+            wanted: BPM-aware shuffle, mood tagging, "what was I listening to in March 2018" search.
+            Self-hosted, single user, intentionally unscalable.</p>
+          <div class="proj-meta">
+            <span class="badge live">live</span>
+            <div class="chips">
+              <span class="chip">elixir</span>
+              <span class="chip">liveview</span>
+              <span class="chip">music</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
+          <a href="#" class="icon-link" aria-label="Live site" title="live"><i data-lucide="external-link"></i></a>
+        </div>
+      </li>
+
+      <li>
+        <div class="left">
+          <div class="proj-head">
+            <div class="name"><a href="#">paperclip</a></div>
+            <span class="year tnum">2021</span>
+          </div>
+          <p class="proj-desc">A Chrome extension that quietly archived every PDF I downloaded for tax
+            purposes, then OCR'd them into a searchable corpus. Solved a real problem, then Apple changed
+            something and it stopped working. I never fixed it.</p>
+          <div class="proj-meta">
+            <span class="badge archived">archived</span>
+            <div class="chips">
+              <span class="chip">typescript</span>
+              <span class="chip">ocr</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
+        </div>
+      </li>
+
+      <li>
+        <div class="left">
+          <div class="proj-head">
+            <div class="name"><a href="#">this site</a></div>
+            <span class="year tnum">2026</span>
+          </div>
+          <p class="proj-desc">A small personal site built on the Ledgerline design language, inverted
+            to a darker palette. Hand-written HTML, no framework, no build step. The way websites used
+            to feel.</p>
+          <div class="proj-meta">
+            <span class="badge live">live</span>
+            <div class="chips">
+              <span class="chip">html</span>
+              <span class="chip">css</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="#" class="icon-link" aria-label="Source" title="source"><i data-lucide="code"></i></a>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <span class="colophon">© 2026 · built quietly in berlin</span>
+    <div class="links">
+      <a href="https://github.com/" target="_blank" rel="noreferrer">github</a>
+      <a href="https://bsky.app/" target="_blank" rel="noreferrer">bluesky</a>
+      <a href="mailto:alex@rivera.dev">email</a>
+      <a href="contact.html">more →</a>
+    </div>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>
