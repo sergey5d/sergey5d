@@ -162,7 +162,7 @@ code, .mono { font-family: var(--font-code); font-size: 0.9em; color: var(--fg-2
 }
 .shell.wide { max-width: var(--content-w-wide); }
 
-main { flex: 1 0 auto; padding: var(--space-12) 0 var(--space-16); }
+main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 
 /* =========================================================================
    HEADER / NAV
@@ -303,6 +303,7 @@ main { flex: 1 0 auto; padding: var(--space-12) 0 var(--space-16); }
    ========================================================================= */
 
 .section { margin-top: var(--space-12); }
+.intro + .section { margin-top: var(--space-8); }
 
 .section-head {
   display: flex;
@@ -730,12 +731,12 @@ main { flex: 1 0 auto; padding: var(--space-12) 0 var(--space-16); }
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-6);
 }
 
 .intro .hello {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--fg-muted);
   letter-spacing: 0.04em;
   display: flex;
@@ -790,6 +791,7 @@ main { flex: 1 0 auto; padding: var(--space-12) 0 var(--space-16); }
 }
 .fun-facts-more {
   max-width: 82ch;
+  margin-top: 6px;
 }
 .fun-facts-more summary {
   display: inline-block;
@@ -904,7 +906,7 @@ main { flex: 1 0 auto; padding: var(--space-12) 0 var(--space-16); }
 
 @media (max-width: 640px) {
   .shell { padding: 0 var(--space-4); }
-  main { padding: var(--space-8) 0 var(--space-12); }
+  main { padding: var(--space-6) 0 var(--space-12); }
   .site-header .shell { height: 52px; }
   .nav a { padding: 6px 8px; font-size: 12px; }
   .wordmark .handle { display: none; }
