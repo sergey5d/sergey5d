@@ -264,7 +264,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   font-size: 12px;
   color: var(--fg-muted);
   letter-spacing: 0.04em;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-6);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -758,7 +758,6 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--fg-1);
-  max-width: 24ch;
   text-wrap: balance;
 }
 .intro h1 em {
