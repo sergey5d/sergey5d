@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects — Alex Rivera</title>
+  <title>Work Experience — Sergey Denisov</title>
   <link rel="stylesheet" href="site.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
@@ -13,212 +13,108 @@
   <div class="shell">
     <a href="index.html" class="wordmark" aria-label="Home">
       <span class="dot"></span>
-      <span>Alex Rivera</span>
+      <span>Sergey Denisov</span>
       <span class="handle">~/arivera</span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="projects.html" class="is-active">Projects</a>
+      <a href="projects.html" class="is-active">Work Experience</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<main data-screen-label="Projects">
+<main data-screen-label="Work Experience">
   <div class="shell">
 
     <div class="page-head">
-      <div class="eyebrow">// projects</div>
-      <h1 class="title">Things I've <em>built</em>, broken, and occasionally finished.</h1>
-      <p class="lede">A working ledger of side projects, open-source tools, and a few client jobs that
-        survived to production. Status is honest — if it says archived, it's archived.</p>
+      <div class="eyebrow">// work experience</div>
+      <h1 class="title">Systems, markets, and a lot of <em>production</em> responsibility.</h1>
+      <p class="lede">Most of my work has lived in trading, settlement, and operational tooling: backend-heavy systems, evolving schemas, and a steady stream of code that had to keep behaving under pressure.</p>
     </div>
 
-    <ul class="projects">
+    <section class="experience">
+      <article class="experience-item">
+        <div class="experience-head">
+          <div>
+            <h2>Gemini</h2>
+            <p class="experience-role">Staff Software Engineer · Order Management</p>
+          </div>
+          <div class="experience-meta">
+            <span>Remote (US)</span>
+            <span class="tnum">2022 – Feb 2026</span>
+          </div>
+        </div>
+        <p class="experience-summary">Crypto exchange and custodian supporting spot and derivatives trading, equities, and event contracts.</p>
+        <p class="experience-env"><strong>Environment:</strong> Scala, Go, Python, TypeScript, React, Kafka, Bazel, gRPC (Protobuf), PostgreSQL, Redis, Kubernetes (EKS), AWS, Terraform, Helm, Docker, Harness, Jenkins, GitHub Actions, Claude Code</p>
+        <ul class="experience-points">
+          <li>Led a team of 4 engineers; owned execution, code quality, and mentoring.</li>
+          <li>Top-10 GitHub contributor in the company monorepo.</li>
+          <li>Led migration from hardcoded asset and instrument definitions to service-driven dynamic configuration, updating SBE message schemas, evolving database schemas, and modifying large parts of the monorepo while maintaining production stability. Built TypeScript self-serve admin tooling with validation and audit trails so business users could safely manage assets and instruments without engineering involvement.</li>
+          <li>Implemented dynamic instrument restrictions at scale for 5,000 instruments and 300K restrictions: integrated a new restrictions service, introduced business-entity–based rules, added caching for efficient evaluation, and migrated legacy logic. Delivered admin tooling with a React UI and audit history that removed SQL from the restriction update workflow and enabled self-serve availability management. Added Slack notifications for change visibility.</li>
+          <li>Built incentives and leaderboards backend for derivatives trading with reproducible computations, eligibility logic, and auditable outputs: scheduled winner selection, P&amp;L and ROI aggregation, notifications, and REST APIs consumed by the UI.</li>
+          <li>Contributed to Gemini’s Settlement Engine, enabling complex multi-asset clearing between institutional counterparties, and maintained the legacy Gemini Clearing Engine.</li>
+          <li>Improved order lifecycle flows and onboarding by building and maintaining customer-facing REST APIs across order and institutional client pipelines, including ledger interactions for tracking transaction state and account balances.</li>
+          <li>Delivered internal admin tools including bulk credit issuance used for asset delistings and customer offboarding; recognized by department leadership for streamlining operations.</li>
+          <li>Deployed microservices to Kubernetes on EKS by updating Helm charts and releasing via Harness CI/CD. Supported safe rollouts as a release pilot engineer for customer-facing services.</li>
+          <li>Developed and owned Datadog dashboards, monitors, and runbooks for order-ingress pipelines, improving detection and remediation of production issues.</li>
+        </ul>
+      </article>
 
-      <li>
-        <div class="left">
-          <div class="proj-head">
-            <div class="name"><a href="#">pgshift</a></div>
-            <span class="year tnum">2024 — present</span>
+      <article class="experience-item">
+        <div class="experience-head">
+          <div>
+            <h2>Morgan Stanley</h2>
+            <p class="experience-role">Vice President / Senior Software Engineer · Credit Derivatives</p>
           </div>
-          <p class="proj-desc">An ergonomic CLI for zero-downtime Postgres schema changes. Online type
-            conversions, expand–contract migrations, partial backfills with bounded write amplification.
-            Used in production by three companies I know of and probably a few I don't.</p>
-          <div class="proj-meta">
-            <span class="badge live">live</span>
-            <div class="chips">
-              <span class="chip">rust</span>
-              <span class="chip">postgres</span>
-              <span class="chip">cli</span>
-            </div>
+          <div class="experience-meta">
+            <span>New York, NY</span>
+            <span class="tnum">2015 – 2022</span>
           </div>
         </div>
-        <div class="right">
-          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
-          <a href="#" class="icon-link" aria-label="Docs" title="docs"><i data-lucide="external-link"></i></a>
-        </div>
-      </li>
+        <p class="experience-summary">Tradeflow: CDS ledger and lifecycle platform for credit derivatives, used by Operations and integrated with client trading and settlement systems across New York, London, and Hong Kong.</p>
+        <p class="experience-env"><strong>Environment:</strong> Java 8, Scala, C#, Akka Streams, Kafka, Sybase, Spring, Gradle, Git</p>
+        <ul class="experience-points">
+          <li>Built a Scala bridge to feed trade data from a legacy Java trading system into a next-generation Scala risk platform using Akka Streams and Kafka.</li>
+          <li>Delivered Book Move automation for moving thousands to tens of thousands of trades: automated account adjustments, fee-trade generation, and reporting. Implemented a two-phase rollout culminating in redesigned accounting behavior that retained realized payments and moved only unrealized ones, reducing operational risk.</li>
+          <li>Overhauled Credit Event Management tooling for hard credit events: improved trade eligibility discovery, reference entity and portfolio version updates, and fee application. Reduced execution time and eliminated routine developer involvement.</li>
+          <li>Re-architected synchronization of back-to-back trades with parent trades; reduced incidents from 2–3 per week to roughly 1–2 every 6 months, with the remaining issues largely unrelated to sync logic.</li>
+          <li>Implemented workflow and state-machine updates for new business requirements, and enhanced trade maturation reporting and batch workflows.</li>
+          <li>Drove stability improvements through server-side support and defect reduction, shifting support rotations from high-volume firefighting to mostly integration-related issues.</li>
+        </ul>
+      </article>
 
-      <li>
-        <div class="left">
-          <div class="proj-head">
-            <div class="name"><a href="#">slowloop</a></div>
-            <span class="year tnum">2025</span>
+      <article class="experience-item">
+        <div class="experience-head">
+          <div>
+            <h2>Markit</h2>
+            <p class="experience-role">Vice President / Senior Software Engineer</p>
           </div>
-          <p class="proj-desc">A tiny job runner that makes "run this every Tuesday at 3am, but not if
-            it's a holiday in Frankfurt" the boring sentence it should always have been. ~600 lines of Go.</p>
-          <div class="proj-meta">
-            <span class="badge shipped">shipped</span>
-            <div class="chips">
-              <span class="chip">go</span>
-              <span class="chip">cron</span>
-              <span class="chip">sqlite</span>
-            </div>
+          <div class="experience-meta">
+            <span>New York, NY</span>
+            <span class="tnum">2009 – 2015</span>
           </div>
         </div>
-        <div class="right">
-          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
-        </div>
-      </li>
+        <p class="experience-summary">Lead developer on Genpact KYC Services and Markit Hub, spanning secure portals, APIs, SSO, publishing pipelines, partner integrations, and reliability improvements.</p>
+        <p class="experience-env"><strong>Environment:</strong> Java 7, Oracle, Tomcat, Spring Core, Spring MVC, Spring Security, Spring OAuth, Thymeleaf, AngularJS, JavaScript, Maven, Subversion</p>
+        <ul class="experience-points">
+          <li>Led development on Genpact KYC Services: a secure portal, API workflows, and integration services for KYC data and subscriptions.</li>
+          <li>Led development on Markit Hub: a financial content aggregation and SSO platform with provider integrations and publishing pipelines across SOAP, CSV, and RSS feeds.</li>
+          <li>Drove platform migrations and reliability improvements across multiple internal and partner-facing services.</li>
+        </ul>
+      </article>
+    </section>
 
-      <li>
-        <div class="left">
-          <div class="proj-head">
-            <div class="name"><a href="#">strange loop 2026 — settlement at 100x</a></div>
-            <span class="year tnum">Mar 2026</span>
-          </div>
-          <p class="proj-desc">Conference talk on how we rebuilt a payments settlement pipeline to handle a
-            hundredfold increase in volume without rewriting the surrounding 12 services. Slides, recording,
-            and the chart I'm still mildly embarrassed about.</p>
-          <div class="proj-meta">
-            <span class="badge shipped">shipped</span>
-            <div class="chips">
-              <span class="chip">talk</span>
-              <span class="chip">distributed-systems</span>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <a href="#" class="icon-link" aria-label="Slides" title="slides"><i data-lucide="file-text"></i></a>
-          <a href="#" class="icon-link" aria-label="Recording" title="recording"><i data-lucide="play"></i></a>
-        </div>
-      </li>
-
-      <li>
-        <div class="left">
-          <div class="proj-head">
-            <div class="name"><a href="#">tinytrace</a></div>
-            <span class="year tnum">2025</span>
-          </div>
-          <p class="proj-desc">An opinionated tracing wrapper for small teams who don't want to host an
-            OTel collector. Stores spans in Postgres, ships a small browser UI for searching them.
-            Single static binary. Not the right tool for big shops; perfect for everyone else.</p>
-          <div class="proj-meta">
-            <span class="badge in-progress">in progress</span>
-            <div class="chips">
-              <span class="chip">rust</span>
-              <span class="chip">otel</span>
-              <span class="chip">observability</span>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
-        </div>
-      </li>
-
-      <li>
-        <div class="left">
-          <div class="proj-head">
-            <div class="name"><a href="#">letterhash</a></div>
-            <span class="year tnum">2023</span>
-          </div>
-          <p class="proj-desc">A weekly newsletter on infrastructure failures, postmortem culture, and
-            the boring parts of reliability engineering. Ran for 18 months and 64 issues before I needed
-            my weekends back. Archive still online.</p>
-          <div class="proj-meta">
-            <span class="badge archived">archived</span>
-            <div class="chips">
-              <span class="chip">writing</span>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <a href="#" class="icon-link" aria-label="Archive" title="archive"><i data-lucide="archive"></i></a>
-        </div>
-      </li>
-
-      <li>
-        <div class="left">
-          <div class="proj-head">
-            <div class="name"><a href="#">cassette.fm</a></div>
-            <span class="year tnum">2022</span>
-          </div>
-          <p class="proj-desc">A side project that turned into the kind of personal music player I always
-            wanted: BPM-aware shuffle, mood tagging, "what was I listening to in March 2018" search.
-            Self-hosted, single user, intentionally unscalable.</p>
-          <div class="proj-meta">
-            <span class="badge live">live</span>
-            <div class="chips">
-              <span class="chip">elixir</span>
-              <span class="chip">liveview</span>
-              <span class="chip">music</span>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
-          <a href="#" class="icon-link" aria-label="Live site" title="live"><i data-lucide="external-link"></i></a>
-        </div>
-      </li>
-
-      <li>
-        <div class="left">
-          <div class="proj-head">
-            <div class="name"><a href="#">paperclip</a></div>
-            <span class="year tnum">2021</span>
-          </div>
-          <p class="proj-desc">A Chrome extension that quietly archived every PDF I downloaded for tax
-            purposes, then OCR'd them into a searchable corpus. Solved a real problem, then Apple changed
-            something and it stopped working. I never fixed it.</p>
-          <div class="proj-meta">
-            <span class="badge archived">archived</span>
-            <div class="chips">
-              <span class="chip">typescript</span>
-              <span class="chip">ocr</span>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <a href="#" class="icon-link" aria-label="GitHub repo" title="github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
-        </div>
-      </li>
-
-      <li>
-        <div class="left">
-          <div class="proj-head">
-            <div class="name"><a href="#">this site</a></div>
-            <span class="year tnum">2026</span>
-          </div>
-          <p class="proj-desc">A small personal site built on the Ledgerline design language, inverted
-            to a darker palette. Hand-written HTML, no framework, no build step. The way websites used
-            to feel.</p>
-          <div class="proj-meta">
-            <span class="badge live">live</span>
-            <div class="chips">
-              <span class="chip">html</span>
-              <span class="chip">css</span>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <a href="#" class="icon-link" aria-label="Source" title="source"><i data-lucide="code"></i></a>
-        </div>
-      </li>
-
-    </ul>
+    <section class="section">
+      <div class="section-head">
+        <span class="label">// education</span>
+        <h2>Education</h2>
+      </div>
+      <div class="prose">
+        <p><strong>Master of Science, Computer Systems Analysis</strong> · Pacific National University, Russia</p>
+      </div>
+    </section>
 
   </div>
 </main>
