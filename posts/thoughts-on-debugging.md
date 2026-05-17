@@ -31,12 +31,12 @@ Some readers may argue that unit tests may not cover all potential issues that m
 
 In modern application development, you usually don’t need step-by-step debugging unless:
 
-You are working on a specific complex algorithm, and you would debug it in the context of a running unit test.
+- You are working on a specific complex algorithm, and you would debug it in the context of a running unit test.
 
-You are working on some low-level code operating with memory allocation and pointers, i.e. in C and C++ like languages, with too many factors that can come into play and are too hard to foresee.
+- You are working on some low-level code operating with memory allocation and pointers, i.e. in C and C++ like languages, with too many factors that can come into play and are too hard to foresee.
 
-You are working with a codebase that is not properly unit-tested and is overburdened by convoluted logic that you cannot comprehend.
+- You are working with a codebase that is not properly unit-tested and is overburdened by convoluted logic that you cannot comprehend.
 
 I think that today, when most languages do not require manual memory management and engineers rarely create new complex algorithms, what most people have in mind is the last item.
 
-To conclude: if step-through debugging is your normal way of understanding business logic, that may be a sign that the system is already in an unhealthy state - insufficiently covered by tests, poorly modularized, or reliant on convoluted logic.
+Thus, if step-through debugging is your normal way of understanding business logic, that may be a sign that the system is already in an unhealthy state -  insufficiently covered by tests, poorly modularized, or dependent on poorly written logic.
