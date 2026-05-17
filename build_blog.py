@@ -16,7 +16,7 @@ BLOG_INDEX = ROOT / "blog.html"
 HOME_PAGE = ROOT / "index.html"
 
 SITE_TITLE = "Sergey Denisov"
-SITE_HANDLE = "~/arivera"
+SITE_HANDLE = "/var/log/sergeyd"
 COLLOPHON = "© 2026 · built across OpenAI and Anthropic datacenters"
 FOOTER_LINKS = [
     ('https://github.com/sergey5d', 'github'),
