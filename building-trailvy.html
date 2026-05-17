@@ -43,9 +43,15 @@
     <div class="prose">
       <p>I built Trailvy at some point as a website for trail planning.</p>
 
-      <p>The stack, as far as I remember it now, was Scala, Cassandra, and some JavaScript. I think Bootstrap was in there too, though I would not swear to every detail anymore.</p>
+      <p>The backend was Scala 2.10.4 with an SBT build, Scalatra for HTTP endpoints, Jetty as the embedded web server, Scalate for server-side templates, and Guice with scala-guice for dependency injection. Lift JSON handled JSON, Dispatch was there for HTTP client calls, Scalaz showed up in core and service code, JSoup handled HTML parsing and cleanup, Ehcache was used for caching, and Akka was present for some async and background work.</p>
 
-      <p>It was one of those projects where the technical choices made perfect sense at the time, and then years later you look back and mostly remember the energy around it rather than the architecture diagrams.</p>
+      <p>The data layer was Cassandra through the old Netflix Astyanax client, in a thrift-era setup, which is why the project expected Cassandra on port 9160.</p>
+
+      <p>On the frontend it was jQuery, Backbone.js, Underscore.js, CoffeeScript compiled to JavaScript, Mustache templates in some places, and Masonry for layout. JavaScript tests ran through Karma and PhantomJS.</p>
+
+      <p>Content came from YAML-based POI files, with a custom <code>poi-builder</code> importer loading them into Cassandra. There was also a custom Python plus ImageMagick image pipeline generating sizes like <code>_ls_h1280</code>, <code>_h270</code>, <code>_t328</code>, and <code>_i100</code>.</p>
+
+      <p>It also had a few external integrations: Tumblr and Flickr for image loading, Amazon S3 for original image hosting and CDN duties, and email sending through SMTP or SES-style configuration.</p>
 
       <p>Some screenshots from that version:</p>
 
