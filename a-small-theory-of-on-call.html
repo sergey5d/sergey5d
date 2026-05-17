@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A small theory of on-call — Sergey Denisov</title>
+  <link rel="stylesheet" href="site.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" data-screen-label="Header">
+  <div class="shell">
+    <a href="index.html" class="wordmark" aria-label="Home">
+      <span class="dot"></span>
+      <span>Sergey Denisov</span>
+      <span class="handle">~/arivera</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Work Experience</a>
+      <a href="blog.html" class="is-active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="post" data-screen-label="Blog post">
+  <div class="shell">
+
+    <a href="blog.html" class="back-link"><i data-lucide="arrow-left"></i> all posts</a>
+
+    <h1>A small theory of on-call</h1>
+
+    <div class="post-meta">
+      <span class="tnum">29 Mar 2026</span>
+      <span>·</span>
+      <span>5 min</span>
+      <span>·</span>
+      <span>operations</span>
+    </div>
+
+    <div class="prose">
+      <p>Good on-call is not just about waking the right person up. It is about teaching the system and the team something every time a page happens.</p>
+
+      <h2>A page should have a lesson inside it</h2>
+
+      <p>If an alert fires and nobody learns anything from it, then it is not really doing the job. It is just background pain with a timestamp attached.</p>
+
+      <h2>Runbooks are not legal documents</h2>
+
+      <p>The best runbooks make the first five minutes easier:</p>
+
+      <ul><li>what failed</li><li>what usually causes it</li><li>what to check first</li><li>what is dangerous to do in a hurry</li></ul>
+
+      <p>Everything else is secondary.</p>
+
+      <h2>The real goal</h2>
+
+      <p>The point of an on-call system is not to prove that engineers are resilient. It is to reduce the number of surprising things that can happen in production, and shorten the time it takes to understand the ones that still do.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <span class="colophon">© 2026 · built across OpenAI and Anthropic datacenters</span>
+    <div class="links">
+      <a href="https://github.com/sergey5d" target="_blank" rel="noreferrer">github</a>
+      <a href="https://www.linkedin.com/in/sadenisov/" target="_blank" rel="noreferrer">linkedin</a>
+      <a href="mailto:alex@rivera.dev">email</a>
+      <a href="contact.html">more →</a>
+    </div>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

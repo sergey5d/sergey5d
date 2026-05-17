@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes on idempotency keys that won't haunt you — Sergey Denisov</title>
+  <link rel="stylesheet" href="site.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" data-screen-label="Header">
+  <div class="shell">
+    <a href="index.html" class="wordmark" aria-label="Home">
+      <span class="dot"></span>
+      <span>Sergey Denisov</span>
+      <span class="handle">~/arivera</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Work Experience</a>
+      <a href="blog.html" class="is-active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="post" data-screen-label="Blog post">
+  <div class="shell">
+
+    <a href="blog.html" class="back-link"><i data-lucide="arrow-left"></i> all posts</a>
+
+    <h1>Notes on idempotency keys that won&#x27;t haunt you</h1>
+
+    <div class="post-meta">
+      <span class="tnum">14 May 2026</span>
+      <span>·</span>
+      <span>9 min</span>
+      <span>·</span>
+      <span>distributed systems</span>
+    </div>
+
+    <div class="prose">
+      <p>Most retry bugs in payments do not come from missing idempotency. They come from idempotency that is <em>almost</em> right — the kind that survives the obvious retries and fails the interesting ones. Here are four patterns I have watched teams reinvent, and one that is actually worth keeping.</p>
+
+      <h2>1. The request-body-as-key trap</h2>
+
+      <p>Hashing the request body and using that as the idempotency key looks elegant for a while. Then a client adds an extra field for internal logging, the hash changes, and suddenly the same business action no longer looks the same. Idempotency keys should be <em>client-owned</em>. The server’s job is to honor them, not invent them.</p>
+
+      <h2>2. Storing only the key</h2>
+
+      <p>The first part of an idempotency layer is asking whether you have seen a key before. The second part is remembering what you told the client the first time. If you store only the key and not the response, your retry path behaves differently from the original path, which defeats most of the value.</p>
+
+      <pre><code>CREATE TABLE idempotency (
+  key            text PRIMARY KEY,
+  request_hash   bytea NOT NULL,
+  response_body  jsonb NOT NULL,
+  response_code  smallint NOT NULL,
+  created_at     timestamptz NOT NULL DEFAULT now(),
+  expires_at     timestamptz NOT NULL
+);</code></pre>
+
+      <h2>3. Reusing the same key for a different payload</h2>
+
+      <p>When the same idempotency key arrives with a different request body, the right answer is not to shrug and return the old response. It is to reject the request clearly. If two requests claim to be the same retry but are not actually the same request, the system should refuse to guess.</p>
+
+      <blockquote>If two requests claim to be the same retry but are not, one of them is lying.</blockquote>
+
+      <h2>4. Getting the expiry window wrong</h2>
+
+      <p>Teams often choose either an expiry window that is too short or one that is absurdly long. The useful number is neither arbitrary nor aesthetic. It should match your longest legitimate retry path, plus some safety margin.</p>
+
+      <h2>The one pattern worth keeping</h2>
+
+      <p>Keep the idempotency layer thin. It should be a small table, a payload check, and a cached response. As soon as it starts accumulating business logic, it becomes the kind of component nobody wants to touch and everybody is afraid to migrate.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <span class="colophon">© 2026 · built across OpenAI and Anthropic datacenters</span>
+    <div class="links">
+      <a href="https://github.com/sergey5d" target="_blank" rel="noreferrer">github</a>
+      <a href="https://www.linkedin.com/in/sadenisov/" target="_blank" rel="noreferrer">linkedin</a>
+      <a href="mailto:alex@rivera.dev">email</a>
+      <a href="contact.html">more →</a>
+    </div>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

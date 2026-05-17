@@ -294,10 +294,11 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 .page-head .title em::after  { content: ']'; opacity: 0.55; margin-left: 1px; }
 
 .page-head .lede {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--fg-3);
-  max-width: 64ch;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--fg-2);
+  max-width: var(--text-measure);
+  font-family: var(--font-mono);
 }
 
 /* =========================================================================
@@ -585,13 +586,15 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 }
 
 .experience-env {
-  color: var(--fg-3);
+  color: var(--fg-2);
   margin-top: var(--space-3);
+  font-style: italic;
 }
 
 .experience-env strong {
   color: var(--fg-1);
   font-weight: 700;
+  font-style: normal;
 }
 
 .experience-points {

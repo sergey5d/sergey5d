@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Migrating a billion rows without anyone noticing — Sergey Denisov</title>
+  <link rel="stylesheet" href="site.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" data-screen-label="Header">
+  <div class="shell">
+    <a href="index.html" class="wordmark" aria-label="Home">
+      <span class="dot"></span>
+      <span>Sergey Denisov</span>
+      <span class="handle">~/arivera</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Work Experience</a>
+      <a href="blog.html" class="is-active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="post" data-screen-label="Blog post">
+  <div class="shell">
+
+    <a href="blog.html" class="back-link"><i data-lucide="arrow-left"></i> all posts</a>
+
+    <h1>Migrating a billion rows without anyone noticing</h1>
+
+    <div class="post-meta">
+      <span class="tnum">14 Jan 2026</span>
+      <span>·</span>
+      <span>11 min</span>
+      <span>·</span>
+      <span>data migrations</span>
+    </div>
+
+    <div class="prose">
+      <p>The best large migration is the one that users do not notice and operators barely remember afterwards.</p>
+
+      <h2>The shape of the problem</h2>
+
+      <p>Changing a hot table with a large amount of traffic is rarely about the SQL itself. It is about choreography:</p>
+
+      <ul><li>new code and old code overlapping</li><li>two schemas being valid at the same time</li><li>backfills that can run safely for days</li></ul>
+
+      <h2>Expand first</h2>
+
+      <p>Add what the future state needs before you remove what the past state depended on. That usually means new columns, dual writes, and a period where both representations are valid.</p>
+
+      <h2>Contract last</h2>
+
+      <p>Only after the system is clearly reading from the new shape should you clean up the old one. Teams get into trouble when they treat deletion as the exciting part.</p>
+
+      <h2>A practical rule</h2>
+
+      <p>If the migration plan looks elegant on a whiteboard but gives on-call engineers nothing to observe or pause, it is not done yet.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <span class="colophon">© 2026 · built across OpenAI and Anthropic datacenters</span>
+    <div class="links">
+      <a href="https://github.com/sergey5d" target="_blank" rel="noreferrer">github</a>
+      <a href="https://www.linkedin.com/in/sadenisov/" target="_blank" rel="noreferrer">linkedin</a>
+      <a href="mailto:alex@rivera.dev">email</a>
+      <a href="contact.html">more →</a>
+    </div>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>
