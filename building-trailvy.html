@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Building Trailvy — Sergey Denisov</title>
+  <title>Building Travelvy.com — Sergey Denisov</title>
   <link rel="stylesheet" href="site.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
@@ -30,7 +30,7 @@
 
     <a href="blog.html" class="back-link"><i data-lucide="arrow-left"></i> all posts</a>
 
-    <h1>Building Trailvy</h1>
+    <h1>Building Travelvy.com</h1>
 
     <div class="post-meta">
       <span class="tnum">16 May 2026</span>
@@ -41,19 +41,33 @@
     </div>
 
     <div class="prose">
-      <p>I built Trailvy at some point as a website for trail planning.</p>
+      <p>We built Travelvy.com at some point as a website for travel planning. The idea was simple: when people travel, give them a website with a curated set of places to visit.</p>
 
-      <p>The backend was Scala 2.10.4 with an SBT build, Scalatra for HTTP endpoints, Jetty as the embedded web server, Scalate for server-side templates, and Guice with scala-guice for dependency injection. Lift JSON handled JSON, Dispatch was there for HTTP client calls, Scalaz showed up in core and service code, JSoup handled HTML parsing and cleanup, Ehcache was used for caching, and Akka was present for some async and background work.</p>
+      <p>There were three of us: two founders and one engineer we hired remotely.</p>
 
-      <p>The data layer was Cassandra through the old Netflix Astyanax client, in a thrift-era setup, which is why the project expected Cassandra on port 9160.</p>
+      <p>It was an interesting journey: finding someone in Edinburgh to photograph the places, though it turned out he did not really know how to do it, another Brit to write proper descriptions of the places, and then building the whole thing. There were also plenty of funny stories about dealing with other people along the way, the kind I am sure any founder could tell, but that probably deserves a separate post.</p>
 
-      <p>On the frontend it was jQuery, Backbone.js, Underscore.js, CoffeeScript compiled to JavaScript, Mustache templates in some places, and Masonry for layout. JavaScript tests ran through Karma and PhantomJS.</p>
+      <p>The backend was Scala with Scalatra and Scalate.</p>
 
-      <p>Content came from YAML-based POI files, with a custom <code>poi-builder</code> importer loading them into Cassandra. There was also a custom Python plus ImageMagick image pipeline generating sizes like <code>_ls_h1280</code>, <code>_h270</code>, <code>_t328</code>, and <code>_i100</code>.</p>
+      <p>The data layer was Cassandra. NoSQL was very much the hype at the time, so of course we overengineered the system.</p>
 
-      <p>It also had a few external integrations: Tumblr and Flickr for image loading, Amazon S3 for original image hosting and CDN duties, and email sending through SMTP or SES-style configuration.</p>
+      <p>On the frontend it was mostly jQuery, Backbone.js, and CoffeeScript. TypeScript was not really a thing yet.</p>
 
-      <p>Some screenshots from that version:</p>
+      <p>Funny thing: even though I was always primarily a backend engineer, I wrote all of the UI myself and was also the primary designer, because at the time, with our limited budget, we could not find anyone even remotely competent for that work. I did it to the best of my abilities, and I am well aware I was not the right person to design anything. In the end I made it look remotely alike one of the trending sites of that period.</p>
+
+      <p>Content lived in YAML files that we edited manually and then uploaded to Cassandra. Images were autoscaled using a Python library.</p>
+
+      <p>Later we added a few external integrations in an attempt to make the website feel more alive: Flickr for image loading and Tumblr for comments.</p>
+
+      <p>We managed to build an MVP and even started advertising it on Google to get traffic. We got about 1,000 visitors in total eventually, and the internet still remembers that the site existed, though I could not find any actual content in web archives.</p>
+
+      <p>The nail in the coffin was the realization that people did not really need this that much, and there were already other companies doing more or less the same thing, with deeper pockets.</p>
+
+      <p>That was, of course, very naive. In the postmortem we agreed that the first step should have been proper market research instead of building it first and then seeing whether anyone needed it.</p>
+
+      <p>Eventually we shut it down, but it was a fun and interesting experience.</p>
+
+      <p>Some screenshots:</p>
 
       <ul><li><a href="posts/content/trailvy_1.png">Screenshot 1</a></li><li><a href="posts/content/trailvy_2.png">Screenshot 2</a></li><li><a href="posts/content/trailvy_3.png">Screenshot 3</a></li></ul>
     </div>
