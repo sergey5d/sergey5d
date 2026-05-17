@@ -31,7 +31,7 @@ We managed to build an MVP and even started advertising it on Google to get traf
 
 The nail in the coffin was the realization that people did not really need this that much, and there were already other companies doing more or less the same thing, with deeper pockets.
 
-That was, of course, very naive. In the postmortem we agreed that the first step should have been proper market research instead of building it first and then seeing whether anyone needed it. Even a small ad campaign for a few hundred dollars would probably have saved us from undertaking the whole journey.
+Building it, of course, was very naive. In the postmortem we agreed that the first step should have been proper market research, to see whether anyone needed it. Even a small ad campaign for a few hundred dollars would probably have saved us from undertaking the whole journey.
 
 Eventually we shut it down, but it was a fun and interesting experience.
 

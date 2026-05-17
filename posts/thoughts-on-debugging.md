@@ -2,84 +2,41 @@
 title: Thoughts on debugging
 slug: thoughts-on-debugging
 date: 2026-05-17
-excerpt: Unless you are writing low-level code that works directly with memory, there is usually very little reason to "debug" a system in the old-school sense.
+excerpt: Step-through debugging is still useful in some cases, but if it is your normal way of understanding business logic, that may be a sign the system is already in an unhealthy state.
 reading_time: 3 min
 category: engineering
 ---
 
-Unless you are writing a low-level language, or working in a part of the system that deals directly with memory, there is usually very little chance that you actually need to debug it in the old-school sense.
+In the past few months, there has been a flood of messages from SWEs trying to defend their stance that they are still relevant and their skills are needed in the post-LLM era, where the majority of the code is written by LLMs.
 
-Most of the time the problem is not that the machine is doing something mysterious. The problem is that we do not understand the system well enough yet.
+I won’t delve into the arguments of either AI denialists, who state that AI will collapse under the weight of the slop it produces, nor will I defend the side of AI pushers who overstate current LLM abilities.
 
-In ordinary backend work, most bugs give themselves away if you do the boring things properly:
+In this note, I want to discuss a common and recurring theme people raise: that it is impossible to do step-through debugging with LLM-generated code that nobody understands.
 
-- read the code carefully
-- check the logs
-- verify inputs and outputs
-- trace the data flow
-- confirm your assumptions against reality
+First of all, I do not deny the complexity that LLM-generated code brings to large-system development. Most large code bases follow specific patterns that allow you to navigate through the system based on these anchors and comprehend intent and logic. When LLM-generated code breaks these often loosely defined conventions, it adds another layer of complexity and increases the comprehension burden.
 
-That is not really debugging in the classic sense. It is closer to reading, observation, and refusing to guess too early.
+What I would like to question here is the assumption that we still need to rely on step-through debugging.
 
-Of course there are exceptions. If you are dealing with memory corruption, undefined behavior, concurrency at a low level, or something close to the metal, then yes, real debugging tools matter a lot.
+It was initially quite surprising to see people seriously discussing the need for step-through debugging, and then I realized I had just forgotten the modus operandi that was valid for me about 5 years ago.
 
-But for most application code, reaching for a debugger too early is often just a way to avoid thinking clearly about what the code is supposed to do.
+Why was I surprised? Because I rarely do step-through debugging now. And if I ever happen to do it, it is to verify what’s wrong by comparing the output of a specific call against what is expected in unit tests, not to figure out what is happening in the system code.
 
-## Working draft
+How did this change of paradigm - that I’m not doing step-through debugging anymore - happen?
 
-so I'm seeing a lot of posts on X that oh AI vibeslopped tons of code and now you have to debug it. I'm generally suprised that people still debug the code. in my past 4 years I did it super rarealy, am I outlier or this is just indicates that their systems are not unit test covered enough?
+That was due to a mixed set of reasons that shifted my mental paradigm. First, our dev environment was extremely hard to bring up, and every other time something was broken. That, of course, was just a reflection of the constraints of working in a small company with limited resources to make everything right. Thus, in order to bring the system into a runnable state, I had to spend time waiting until all required containers started, and then more time verifying what had gone wrong. This was a real drag on my time, and eventually I started to operate in a “cover every possible scenario, and if something seems broken, write even more unit tests” paradigm.
 
-Thought for a couple of seconds
+Another drag that made it unfeasible was just the nature of the system: when you have calls to different microservices in the code you are working on, step-by-step debugging becomes extremely time-consuming. So these two factors - limits imposed by our dev environment and the complexity of the system - pushed me to stop using step-by-step debugging as a tool to verify the correctness of my code.
 
-You are probably not an outlier, but you may be using a narrower meaning of “debug.”
+Some readers may argue that unit tests may not cover all potential issues that might arise in distributed systems, and I wholeheartedly agree with this. But step-through debugging is practical mostly in local or development-like environments, so it won’t help much with those problems either. My previous points about the extensive use of unit tests do not imply that the system should only have them and nothing else.
 
-In mature backend systems, especially ones with decent unit/integration tests, good logs, reproducible local/dev environments, and strong type systems, you often do not sit there stepping through code in a debugger. Most “debugging” becomes:
+In modern application development, you usually don’t need step-by-step debugging unless:
 
-“Test failed → inspect assertion/logs → reason about code → fix → rerun tests.”
+You are working on a specific complex algorithm, and you would debug it in the context of a running unit test.
 
-That is normal for experienced backend engineers.
+You are working on some low-level code operating with memory allocation and pointers, i.e. in C and C++ like languages, with too many factors that can come into play and are too hard to foresee.
 
-Where people say “AI generated a ton of code and now I have to debug it,” they may mean several different things:
+You are working with a codebase that is not properly unit-tested and is overburdened by convoluted logic that you cannot comprehend.
 
-Literal debugger debugging
-Stepping through generated code because they do not understand what it does. This often happens when they accepted too much AI output without reviewing architecture or invariants.
+I think that today, when most languages do not require manual memory management and engineers rarely create new complex algorithms, what most people have in mind is the last item.
 
-Trying to make untested code work
-The AI produced plausible code, but there are no strong tests, so the person manually runs the app, clicks around, hits bugs, adds patches, repeats. That is basically “vibe QA.”
-
-Integration debugging
-Unit tests may pass, but the generated code misunderstood API contracts, DB schema, auth flow, async behavior, transaction boundaries, race conditions, nullability, etc. These are harder to catch with shallow unit tests.
-
-Semantic debugging
-The code compiles and tests pass, but it solves the wrong problem. This is very common with LLM code because it optimizes for plausible implementation, not necessarily the actual business invariant.
-
-So yes, a lot of these complaints probably indicate weak test coverage, but not only that. It also indicates weak engineering process around AI-generated code.
-
-The healthy AI-assisted workflow is closer to:
-
-- define behavior/invariants
-- write or ask AI to write tests
-- review tests carefully
-- generate implementation
-- run tests
-- review diff like a human wrote it
-- tighten edge cases
-
-The unhealthy workflow is:
-
-- ask AI to build feature
-- paste huge diff
-- app kind of runs
-- now hunt bugs manually
-
-That second one creates the “vibeslop” problem.
-
-Your experience probably comes from working in systems where bugs were caught by a combination of:
-
-- types
-- compiler
-- tests
-- logs
-- metrics
-- code review
-- production safeguards
+To conclude: if step-through debugging is your normal way of understanding business logic, that may be a sign that the system is already in an unhealthy state - insufficiently covered by tests, poorly modularized, or reliant on convoluted logic.
