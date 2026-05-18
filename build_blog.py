@@ -314,7 +314,7 @@ def render_blog_index(posts: list[Post]) -> str:
     <div class="page-head">
       <div class="eyebrow">// writing</div>
       <h1 class="title">Notes on anything of substance or lack thereof</h1>
-      <p class="lede">Just random thoughts and rambling.</p>
+      <p class="lede">Just random thoughts and rambling...</p>
     </div>
 {''.join(sections)}
 """
