@@ -283,7 +283,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   color: var(--fg-1);
   font-weight: 800;
   margin: 0 0 var(--space-4);
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 .page-head .title em {
   font-style: normal;

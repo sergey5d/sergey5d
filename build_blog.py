@@ -313,8 +313,8 @@ def render_blog_index(posts: list[Post]) -> str:
     content = f"""
     <div class="page-head">
       <div class="eyebrow">// writing</div>
-      <h1 class="title">Notes on anything of <em>substance</em></h1>
-      <p class="lede">Mostly distributed systems, databases, and the social half of building software. I write when I have something to say, not on a schedule.</p>
+      <h1 class="title">Notes on anything of substance or lack thereof</h1>
+      <p class="lede">Just random thoughts and rambling.</p>
     </div>
 {''.join(sections)}
 """
