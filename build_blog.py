@@ -21,7 +21,6 @@ COLLOPHON = "© 2026 · built across OpenAI and Anthropic datacenters"
 FOOTER_LINKS = [
     ('https://github.com/sergey5d', 'github'),
     ('https://www.linkedin.com/in/sadenisov/', 'linkedin'),
-    ('mailto:alex@rivera.dev', 'email'),
     ('contact.html', 'more →'),
 ]
 
