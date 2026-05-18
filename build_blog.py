@@ -191,7 +191,7 @@ def footer_html(back_href: str) -> str:
 def page_shell(title: str, main_label: str, main_content: str, active_nav: str) -> str:
     nav = {
         "Home": "",
-        "Work Experience": "",
+        "Experience": "",
         "Blog": "",
         "Contact": "",
     }
@@ -216,7 +216,7 @@ def page_shell(title: str, main_label: str, main_content: str, active_nav: str) 
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="index.html"{nav["Home"]}>Home</a>
-      <a href="projects.html"{nav["Work Experience"]}>Work Experience</a>
+      <a href="projects.html"{nav["Experience"]}>Experience</a>
       <a href="blog.html"{nav["Blog"]}>Blog</a>
       <a href="contact.html"{nav["Contact"]}>Contact</a>
     </nav>
@@ -312,7 +312,7 @@ def render_blog_index(posts: list[Post]) -> str:
     content = f"""
     <div class="page-head">
       <div class="eyebrow">// writing</div>
-      <h1 class="title">Notes on anything of substance or lack thereof</h1>
+      <h1 class="title">Random thoughts about software, AI, and everything else</h1>
       <p class="lede">Just random thoughts and rambling...</p>
     </div>
 {''.join(sections)}
