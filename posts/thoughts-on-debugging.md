@@ -25,11 +25,13 @@ How did this change of paradigm - that I’m not doing step-through debugging an
 
 That was due to a mixed set of reasons that shifted my mental paradigm. First, our dev environment was extremely hard to bring up, and every other time something was broken. That, of course, was just a reflection of the constraints of working in a small company with limited resources to make everything right. Thus, in order to bring the system into a runnable state, I had to spend time waiting until all required containers started, and then more time verifying what had gone wrong. This was a real drag on my time, and eventually I started to operate in a “cover every possible scenario, and if something seems broken, write even more unit tests” paradigm.
 
-Another drag that made it unfeasible was just the nature of the system: when you have calls to different microservices in the code you are working on, step-by-step debugging becomes extremely time-consuming. So these two factors - limits imposed by our dev environment and the complexity of the system - pushed me to stop using step-by-step debugging as a tool to verify the correctness of my code.
+Another thing that made it unfeasible was just the nature of the system: when you have calls to different microservices in the code you are working on, step-by-step debugging becomes useless. 
 
-Some readers may argue that unit tests may not cover all potential issues that might arise in distributed systems, and I wholeheartedly agree with this. But step-through debugging is practical mostly in local or development-like environments, so it won’t help much with those problems either. My previous points about the extensive use of unit tests do not imply that the system should only have them and nothing else.
+So these two factors - limits imposed by our dev environment and the complexity of the system - pushed me to stop using step-by-step debugging as a tool to verify the correctness of the code.
 
-In modern application development, you usually don’t need step-by-step debugging unless:
+Some readers may argue that unit tests may not cover all potential issues that might arise in distributed systems, and I totally agree with this. But step-through debugging is practical mostly in local or development-like environments, so it won’t help much with those problems either. My previous points about the extensive use of unit tests do not imply that the system should only have them and nothing else.
+
+In application development, you usually don’t need step-by-step debugging unless:
 
 - You are working on a specific complex algorithm, and you would debug it in the context of a running unit test.
 
@@ -39,4 +41,8 @@ In modern application development, you usually don’t need step-by-step debuggi
 
 I think that today, when most languages do not require manual memory management and engineers rarely create new complex algorithms, what most people have in mind is the last item.
 
-Thus, if step-through debugging is your normal way of understanding business logic, that may be a sign that the system is already in an unhealthy state -  insufficiently covered by tests, poorly modularized, or dependent on poorly written logic.
+And here comes the trouble: of course, if you are relying on step-through debugging, LLM-generated code will make your life extremely hard. But your system is already in an unhealthy state. It either has insufficient test coverage, is not properly modularized, has side effects here and there, has problems with logic, or, most likely, all of these.
+
+So these arguments sound to me more like: we have already reached the boundaries of what we can do with the current system, and pushing beyond them is going to break it. This might be true, but it doesn’t have to be.
+
+On the bright side, unit tests have become extremely cheap now. By extension, once your system is properly covered, you can move in the right direction by introducing proper abstractions and refactoring code, which would have been much harder to do prior to LLM code generation.
