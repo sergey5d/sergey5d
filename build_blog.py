@@ -191,6 +191,7 @@ def footer_html(back_href: str) -> str:
 def page_shell(title: str, main_label: str, main_content: str, active_nav: str) -> str:
     nav = {
         "Home": "",
+        "About": "",
         "Experience": "",
         "Blog": "",
         "Contact": "",
@@ -218,6 +219,7 @@ def page_shell(title: str, main_label: str, main_content: str, active_nav: str) 
       <a href="index.html"{nav["Home"]}>Home</a>
       <a href="projects.html"{nav["Experience"]}>Experience</a>
       <a href="blog.html"{nav["Blog"]}>Blog</a>
+      <a href="about.html"{nav["About"]}>About</a>
       <a href="contact.html"{nav["Contact"]}>Contact</a>
     </nav>
   </div>

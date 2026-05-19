@@ -258,6 +258,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
    ========================================================================= */
 
 .page-head { margin-bottom: var(--space-12); }
+.page-head.about-head { margin-bottom: var(--space-6); }
 
 .page-head .eyebrow {
   font-family: var(--font-mono);
@@ -282,7 +283,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   letter-spacing: -0.02em;
   color: var(--fg-1);
   font-weight: 800;
-  margin: 0 0 var(--space-4);
+  margin: 0 0 var(--space-6);
   text-wrap: pretty;
 }
 .page-head .title em {
@@ -354,6 +355,19 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 .prose em { color: var(--accent-500); font-style: normal; }
 .prose em::before { content: '_'; opacity: 0.6; }
 .prose em::after  { content: '_'; opacity: 0.6; }
+.about-list {
+  padding-left: 22px;
+  margin: 0;
+}
+.about-list li {
+  font-size: 14.5px;
+  line-height: 1.8;
+  font-family: var(--font-mono);
+  color: var(--fg-2);
+}
+.about-list li + li {
+  margin-top: 8px;
+}
 
 /* =========================================================================
    BADGES — [STATUS]
