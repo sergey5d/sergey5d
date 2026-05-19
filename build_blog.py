@@ -196,7 +196,7 @@ def page_shell(title: str, main_label: str, main_content: str, active_nav: str) 
         "Blog": "",
         "Contact": "",
     }
-    nav[active_nav] = ' class="is-active" style="font-weight: 500"'
+    nav[active_nav] = ' class="is-active"'
     return f"""<!doctype html>
 <html lang="en">
 <head>

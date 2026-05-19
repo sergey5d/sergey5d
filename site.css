@@ -111,6 +111,10 @@ html, body {
   margin: 0;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -225,12 +229,19 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   font-size: 13px;
   color: var(--fg-3);
   font-family: var(--font-mono);
+  font-weight: 500;
+  position: relative;
   border-radius: var(--radius-sm);
   transition: color var(--dur) var(--ease-out), background var(--dur) var(--ease-out);
 }
 .nav a:hover { color: var(--fg-1); background: var(--bg-subtle); }
 .nav a.is-active { color: var(--accent-500); }
-.nav a.is-active::before { content: '> '; color: var(--accent-600); }
+.nav a.is-active::before {
+  content: '>';
+  position: absolute;
+  left: -10px;
+  color: var(--accent-600);
+}
 
 /* =========================================================================
    FOOTER
