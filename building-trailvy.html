@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Building Travelvy.com — Sergey Denisov</title>
+  <link rel="stylesheet" href="site.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" data-screen-label="Header">
+  <div class="shell">
+    <a href="index.html" class="wordmark" aria-label="Home">
+      <span class="dot"></span>
+      <span>Sergey Denisov</span>
+      <span class="handle"></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Experience</a>
+      <a href="blog.html" class="is-active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="post" data-screen-label="Blog post">
+  <div class="shell">
+
+    <a href="blog.html" class="back-link"><i data-lucide="arrow-left"></i> all posts</a>
+
+    <h1>Building Travelvy.com</h1>
+
+    <div class="post-meta">
+      <span class="tnum">16 May 2026</span>
+      <span>·</span>
+      <span>4 min</span>
+      <span>·</span>
+      <span>projects</span>
+    </div>
+
+    <div class="prose">
+      <p>We built Travelvy.com about 10 years ago, when, like many aspiring entrepreneurs, I decided I wanted to build something big and went with the only idea that came to mind. It was a travel-planning website with a curated set of places to visit. It was not a particularly bright idea, to be honest, though in my defense I was not very far from most of my peers at the time.</p>
+
+      <p>There were three of us: two founders and one engineer we hired remotely.</p>
+
+      <p>It was an interesting journey: finding someone in Edinburgh to photograph the places, though it turned out he did not really know how to do it, another Brit to write proper descriptions of the places, and then building the whole thing. There were also plenty of funny stories about dealing with other people along the way, the kind I am sure any founder could tell, but that probably deserves a separate post.</p>
+
+      <p>The backend was Scala with Scalatra and Scalate.</p>
+
+      <p>The data layer was Cassandra. NoSQL was very much the hype at the time, so of course we overengineered the system.</p>
+
+      <p>On the frontend it was mostly jQuery, Backbone.js, and CoffeeScript. TypeScript was not really a thing yet.</p>
+
+      <p>Funny thing: even though I was always primarily a backend engineer, I wrote all of the UI myself and was also the primary designer, because at the time, with our limited budget, we could not find anyone even remotely competent for that work. I did it to the best of my artistic abilities, which, to be frank, I totally lack. In the end I made it look remotely alike one of the trending sites.</p>
+
+      <p>Content lived in YAML files that we edited manually and then uploaded to Cassandra. Images were autoscaled using a Python library.</p>
+
+      <p>Later we added a few external integrations in an attempt to make the website feel more alive: Flickr for extra images, since our own stock was rather limited, and Tumblr for comments.</p>
+
+      <p>We managed to build an MVP and even started advertising it on Google to get traffic. We got about 1,000 visitors in total eventually, and the internet still remembers that the site existed, though I could not find any actual content in web archives.</p>
+
+      <p>The nail in the coffin was the realization that people did not really need this that much, and there were already other companies doing more or less the same thing, with deeper pockets.</p>
+
+      <p>Building it, of course, was very naive. In the postmortem we agreed that the first step should have been proper market research, to see whether anyone needed it. Even a small ad campaign for a few hundred dollars would probably have saved us from undertaking the whole journey.</p>
+
+      <p>Eventually we shut it down, but it was a fun and interesting experience.</p>
+
+      <p>Some screenshots:</p>
+
+      <ul><li><a href="posts/content/trailvy_1.png">Screenshot 1</a></li><li><a href="posts/content/trailvy_2.png">Screenshot 2</a></li><li><a href="posts/content/trailvy_3.png">Screenshot 3</a></li></ul>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <span class="colophon">© 2026 · built across OpenAI and Anthropic datacenters</span>
+    <div class="links">
+      <a href="https://github.com/sergey5d" target="_blank" rel="noreferrer">github</a>
+      <a href="https://www.linkedin.com/in/sadenisov/" target="_blank" rel="noreferrer">linkedin</a>
+      <a href="contact.html">more →</a>
+    </div>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>
