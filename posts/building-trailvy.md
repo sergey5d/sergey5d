@@ -7,11 +7,11 @@ reading_time: 4 min
 category: projects
 ---
 
-We built Travelvy.com about 10 years ago, when, like many aspiring entrepreneurs, I decided I wanted to build something big and went with the only idea that came to mind. It was a travel-planning website with a curated set of places to visit. It was not a particularly bright idea, to be honest, though in my defense I was not very far from most of my peers at the time.
+We built Travelvy.com about 10 years ago, when, like many aspiring entrepreneurs, I decided I wanted to build something big and went with the only idea that came to mind. It was a travel-planning website with a curated set of places to visit. It was not a particularly bright one, to be honest, though in my defense I was not very far from most of my peers at the time.
 
 There were three of us: two founders and one engineer we hired remotely.
 
-It was an interesting journey: finding someone in Edinburgh to photograph the places, though it turned out he did not really know how to do it, another Brit to write proper descriptions of the places, and then building the whole thing.
+It was an interesting journey: finding someone in Edinburgh to photograph the places, realizing he did not really know how to do it, finding another Brit to write proper descriptions, and then building the whole thing.
 There were also plenty of funny stories about dealing with other people along the way, the kind I am sure any founder could tell, but that probably deserves a separate post.
 
 The backend was Scala with Scalatra and Scalate.

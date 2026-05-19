@@ -203,6 +203,7 @@ def page_shell(title: str, main_label: str, main_content: str, active_nav: str) 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
+  <link rel="icon" type="image/png" href="icon.png" />
   <link rel="stylesheet" href="site.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
