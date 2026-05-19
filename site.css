@@ -239,7 +239,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 .nav a.is-active::before {
   content: '>';
   position: absolute;
-  left: -10px;
+  left: -3px;
   color: var(--accent-600);
 }
 
