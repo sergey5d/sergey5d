@@ -196,7 +196,7 @@ def page_shell(title: str, main_label: str, main_content: str, active_nav: str) 
         "Blog": "",
         "Contact": "",
     }
-    nav[active_nav] = ' class="is-active"'
+    nav[active_nav] = ' class="is-active" style="font-weight: 500"'
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -213,7 +213,6 @@ def page_shell(title: str, main_label: str, main_content: str, active_nav: str) 
     <a href="index.html" class="wordmark" aria-label="Home">
       <span class="dot"></span>
       <span>{SITE_TITLE}</span>
-      <span class="handle">{SITE_HANDLE}</span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="index.html"{nav["Home"]}>Home</a>
@@ -284,7 +283,7 @@ def render_blog_index(posts: list[Post]) -> str:
     year_groups = group_by_year(posts)
     for idx, (year, items) in enumerate(year_groups):
         title = "Recent" if idx == 0 else "Earlier"
-        top_margin = ' style="margin-top: var(--space-8);"' if idx == 0 else ""
+        extra_class = " blog-list-section" if idx == 0 else ""
         list_items = "\n".join(
             f"""        <li>
           <span class="when tnum">{post.date_display}</span>
@@ -298,7 +297,7 @@ def render_blog_index(posts: list[Post]) -> str:
         )
         sections.append(
             f"""
-    <section class="section"{top_margin}>
+    <section class="section{extra_class}">
       <div class="section-head">
         <span class="label">// {year}</span>
         <h2>{title}</h2>
@@ -312,12 +311,14 @@ def render_blog_index(posts: list[Post]) -> str:
         )
 
     content = f"""
-    <div class="page-head">
-      <div class="eyebrow">// writing</div>
-      <h1 class="title">Notes on anything of substance or lack thereof</h1>
-      <p class="lede">Random thoughts about software, systems, AI, and everything else.</p>
-    </div>
+    <div class="page-stack">
+      <div class="page-head">
+        <div class="eyebrow">// writing</div>
+        <h1 class="title">Notes on anything of substance or lack thereof</h1>
+        <p class="lede">Random thoughts about software, systems, AI, and everything else.</p>
+      </div>
 {''.join(sections)}
+    </div>
 """
 
     return page_shell(
