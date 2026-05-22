@@ -33,7 +33,7 @@ Another common narrative is that managers should manage more people. I’m wonde
 
 Software engineers now have a set of tools that allow them to speed up their work. What kind of tools do managers have that could drastically increase communication between people?
 
-Another ingenious argument I heard is to make managers write code. I think this is a naive idea, not because managers are somehow less intelligent than software engineers, but because we live in an environment where human labor is still a factor. Asking people to do work they are not trained to do and expecting the same level of productivity is incorrect.
+Another ingenious argument I heard is to make managers write code. I think this is a naive idea because we live in an environment where human labor is still a factor. Asking people to do work they are not trained to do and expecting the same level of productivity is a mistake.
 
 By analogy, I consider myself an intelligent person and could do some construction work with minimal training, but I would not reach the productivity level of someone experienced for at least some time - and most likely, quite a long time.
 
