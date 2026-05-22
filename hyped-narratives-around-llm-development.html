@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hyped Narratives Around LLM Development — Sergey Denisov</title>
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="stylesheet" href="site.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site-header" data-screen-label="Header">
+  <div class="shell">
+    <a href="index.html" class="wordmark" aria-label="Home">
+      <span class="dot"></span>
+      <span>Sergey Denisov</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Experience</a>
+      <a href="blog.html" class="is-active">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="post" data-screen-label="Blog post">
+  <div class="shell">
+
+    <a href="blog.html" class="back-link"><i data-lucide="arrow-left"></i> all posts</a>
+
+    <h1>Hyped Narratives Around LLM Development</h1>
+
+    <div class="post-meta">
+      <span class="tnum">22 May 2026</span>
+      <span>·</span>
+      <span>6 min</span>
+      <span>·</span>
+      <span>engineering</span>
+    </div>
+
+    <div class="prose">
+      <p>The common narrative right now is that great engineers are 100x more productive. I truly believe AI is an amplifier of intelligence and productivity, and thus the gap between the most and least productive engineers has significantly increased.</p>
+
+      <p>That said, I want to point out that this alleged 100x amplification is taken from samples that do not represent the whole picture.</p>
+
+      <p>It is quite easy to rewrite your existing system in a new language. But is it a change in paradigm, and should it be taken as an example? It has been possible to translate documents using Google Translate for quite a few years now. The quality of translation was mediocre, and I would argue this looks very similar to the quality of code produced by many LLM-driven rewrites.</p>
+
+      <p>It is quite easy to prototype. But should we take an increase in prototyping speed as a proper measurement of software development velocity? If we measure development speed in lines of code - a very rough metric, but still a valid one - it is not a secret that developers building new systems from scratch produce more code than the ones working on existing ones. They are not constrained by existing functionality and more stringent reliability requirements.</p>
+
+      <p>It is also quite easy to create a piece of software that exhibits existing behavior known to LLMs.</p>
+
+      <p>But LLMs cannot come up with novel ideas on their own. You have to figure them out and set them in writing. There is no such thing as an LLM coming up with breakthrough functionality in response to a prompt like “write me a system.” If you outsource your idea generation to an LLM, you will come up with something that represents an averaged commonality — applications that look and behave alike.</p>
+
+      <p>I would argue that 100x could only be achievable if you are trying to create something that was already known to the LLM at the time of training, or if you provided a clear pattern and set of instructions to follow. This would be an exception based on a carefully picked sample, and the multiplier would likely move much lower in the long run. For new systems, that pattern does not exist, and the time needed to define specifications is quite substantial.</p>
+
+      <p>I also do not believe in such high multipliers for reliable systems, because the math simply does not work unless you skip or significantly narrow down human participation in reviewing LLM output. Let’s assume that prior to the LLM era, you could produce one page of code. Now you end up with 100 pages. That is 100 pages you now have to read and comprehend.</p>
+
+      <p>Reading 100 pages of a book may not be hard, and might even be entertainment when reading fiction, but in our sphere, reading new code implies doing mental work. You are not supposed to read code passively. You are supposed to understand what it does, apply critical thinking, challenge assumptions, and verify it.</p>
+
+      <p>One more argument against this narrative is that the majority of the work lies in modifying existing systems. Let’s assume you came to work and now have to work on some existing items in your backlog. If they are simple enough, in the pre-LLM era you might have finished a few if you were very productive. Would you be able to finish, for example, 20 even if an LLM spit out results instantly? I doubt it. Context switching has its own price and takes time.</p>
+
+      <p>You may imagine that you have a really amazing orchestrator to whom you dump all of them, and it completes them without your involvement at all. But then, it is a scenario that does not imply the existence of SWEs at all.</p>
+
+      <p>Another common narrative is that managers should manage more people. I’m wondering what kind of tools make managers much more efficient. If your communications could be handled by an LLM, was there any value in these communications? If spec creation is now done by an LLM in its entirety, what is so valuable in these specs? Has the speed of communication between people increased enough to justify that?</p>
+
+      <p>Software engineers now have a set of tools that allow them to speed up their work. What kind of tools do managers have that could drastically increase communication between people?</p>
+
+      <p>Another ingenious argument I heard is to make managers write code. I think this is a naive idea, not because managers are somehow less intelligent than software engineers, but because we live in an environment where human labor is still a factor. Asking people to do work they are not trained to do and expecting the same level of productivity is incorrect.</p>
+
+      <p>By analogy, I consider myself an intelligent person and could do some construction work with minimal training, but I would not reach the productivity level of someone experienced for at least some time - and most likely, quite a long time.</p>
+
+      <p>To conclude, there are a lot of changes that have happened recently, but too many things that people proclaim to be true are not real. They are based on incorrect understanding and exaggerations of what is happening in the industry.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <span class="colophon">© 2026 · built across OpenAI and Anthropic datacenters</span>
+    <div class="links">
+      <a href="https://github.com/sergey5d" target="_blank" rel="noreferrer">github</a>
+      <a href="https://www.linkedin.com/in/sadenisov/" target="_blank" rel="noreferrer">linkedin</a>
+      <a href="contact.html">more →</a>
+    </div>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

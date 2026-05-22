@@ -1,0 +1,40 @@
+---
+title: Hyped Narratives Around LLM Development
+slug: hyped-narratives-around-llm-development
+date: 2026-05-22
+excerpt: AI is absolutely an amplifier, but the loudest productivity narratives around LLM-driven development are based on narrow samples and exaggerated assumptions.
+reading_time: 6 min
+category: engineering
+---
+
+The common narrative right now is that great engineers are 100x more productive. I truly believe AI is an amplifier of intelligence and productivity, and thus the gap between the most and least productive engineers has significantly increased.
+
+That said, I want to point out that this alleged 100x amplification is taken from samples that do not represent the whole picture.
+
+It is quite easy to rewrite your existing system in a new language. But is it a change in paradigm, and should it be taken as an example? It has been possible to translate documents using Google Translate for quite a few years now. The quality of translation was mediocre, and I would argue this looks very similar to the quality of code produced by many LLM-driven rewrites.
+
+It is quite easy to prototype. But should we take an increase in prototyping speed as a proper measurement of software development velocity? If we measure development speed in lines of code - a very rough metric, but still a valid one - it is not a secret that developers building new systems from scratch produce more code than the ones working on existing ones. They are not constrained by existing functionality and more stringent reliability requirements.
+
+It is also quite easy to create a piece of software that exhibits existing behavior known to LLMs.
+
+But LLMs cannot come up with novel ideas on their own. You have to figure them out and set them in writing. There is no such thing as an LLM coming up with breakthrough functionality in response to a prompt like “write me a system.” If you outsource your idea generation to an LLM, you will come up with something that represents an averaged commonality — applications that look and behave alike.
+
+I would argue that 100x could only be achievable if you are trying to create something that was already known to the LLM at the time of training, or if you provided a clear pattern and set of instructions to follow. This would be an exception based on a carefully picked sample, and the multiplier would likely move much lower in the long run. For new systems, that pattern does not exist, and the time needed to define specifications is quite substantial.
+
+I also do not believe in such high multipliers for reliable systems, because the math simply does not work unless you skip or significantly narrow down human participation in reviewing LLM output. Let’s assume that prior to the LLM era, you could produce one page of code. Now you end up with 100 pages. That is 100 pages you now have to read and comprehend.
+
+Reading 100 pages of a book may not be hard, and might even be entertainment when reading fiction, but in our sphere, reading new code implies doing mental work. You are not supposed to read code passively. You are supposed to understand what it does, apply critical thinking, challenge assumptions, and verify it.
+
+One more argument against this narrative is that the majority of the work lies in modifying existing systems. Let’s assume you came to work and now have to work on some existing items in your backlog. If they are simple enough, in the pre-LLM era you might have finished a few if you were very productive. Would you be able to finish, for example, 20 even if an LLM spit out results instantly? I doubt it. Context switching has its own price and takes time.
+
+You may imagine that you have a really amazing orchestrator to whom you dump all of them, and it completes them without your involvement at all. But then, it is a scenario that does not imply the existence of SWEs at all.
+
+Another common narrative is that managers should manage more people. I’m wondering what kind of tools make managers much more efficient. If your communications could be handled by an LLM, was there any value in these communications? If spec creation is now done by an LLM in its entirety, what is so valuable in these specs? Has the speed of communication between people increased enough to justify that?
+
+Software engineers now have a set of tools that allow them to speed up their work. What kind of tools do managers have that could drastically increase communication between people?
+
+Another ingenious argument I heard is to make managers write code. I think this is a naive idea, not because managers are somehow less intelligent than software engineers, but because we live in an environment where human labor is still a factor. Asking people to do work they are not trained to do and expecting the same level of productivity is incorrect.
+
+By analogy, I consider myself an intelligent person and could do some construction work with minimal training, but I would not reach the productivity level of someone experienced for at least some time - and most likely, quite a long time.
+
+To conclude, there are a lot of changes that have happened recently, but too many things that people proclaim to be true are not real. They are based on incorrect understanding and exaggerations of what is happening in the industry.
