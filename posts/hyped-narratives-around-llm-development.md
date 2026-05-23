@@ -23,7 +23,7 @@ I would argue that 100x could only be achievable if you are trying to create som
 
 I also do not believe in such high multipliers for reliable systems, because the math simply does not work unless you skip or significantly narrow down human participation in reviewing LLM output. Let’s assume that prior to the LLM era, you could produce one page of code. Now you end up with 100 pages. That is 100 pages you now have to read and comprehend.
 
-Reading 100 pages of a book may not be hard, and might even be entertainment when reading fiction, but in our sphere, reading new code implies doing mental work. You are not supposed to read code passively. You are supposed to understand what it does, apply critical thinking, challenge assumptions, and verify it.
+Reading 100 pages of a book may not be hard, and might even be entertaining when reading fiction, but in our sphere, reading new code implies doing mental work. You are not supposed to read code passively. You are supposed to understand what it does, apply critical thinking, challenge assumptions, and verify it.
 
 One more argument against this narrative is that the majority of the work lies in modifying existing systems. Let’s assume you came to work and now have to work on some existing items in your backlog. If they are simple enough, in the pre-LLM era you might have finished a few if you were very productive. Would you be able to finish, for example, 20 even if an LLM spit out results instantly? I doubt it. Context switching has its own price and takes time.
 
@@ -33,9 +33,9 @@ A similar problem appears in the narrative around code review. Some of these cla
 
 That is not the same review process. A review process without another independent party involved is much closer to self-review, which good engineers were already doing before asking others to review their changes.
 
-You may argue that abandoning peer review better suits the new paradigm. After all, software existed without peer reviews for a long time. But it should be understood what is actually happening: the review process is not being improved; independent review is being eliminated.
+You may argue that abandoning peer review better suits the new paradigm. After all, software existed without peer reviews for a long time. But it should be understood: the review process is not being improved; independent reviews are being eliminated.
 
-Another common narrative is that managers should manage more people. I’m wondering what kind of tools make managers much more efficient. If your communications could be handled by an LLM, was there any value in these communications? If spec creation is now done by an LLM in its entirety, what is so valuable in these specs? Has the speed of communication between people increased enough to justify that?
+Another common narrative is that managers should manage more people. I’m wondering what kind of tools make managers much more efficient. If your communications could be handled by an LLM, was there any value in these communications? If specs creation is now done by an LLM in its entirety, what is so valuable in these specs? Has the speed of communication between people increased enough to justify that?
 
 Software engineers now have a set of tools that allow them to speed up their work. What kind of tools do managers have that could drastically increase communication between people?
 
