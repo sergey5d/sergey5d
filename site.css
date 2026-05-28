@@ -4,6 +4,38 @@
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
+@font-face {
+  font-family: 'M PLUS 1';
+  src: url('fonts/MPLUS1p-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'M PLUS 1';
+  src: url('fonts/MPLUS1p-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'M PLUS 1';
+  src: url('fonts/MPLUS1p-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'M PLUS 1';
+  src: url('fonts/MPLUS1p-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   color-scheme: dark;
 
@@ -71,8 +103,8 @@
   --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
   --space-6: 24px; --space-8: 32px; --space-12: 48px; --space-16: 64px;
 
-  /* Type — use the browser's default monospace face site-wide */
-  --font-mono:  monospace;
+  /* Type */
+  --font-mono:  'M PLUS 1', system-ui, sans-serif;
   --font-code:  'JetBrains Mono', 'SF Mono', Menlo, monospace;
   --font-sans:  var(--font-mono);
 
@@ -82,8 +114,8 @@
   --h3-size: 16px; --h3-lh: 1.4;
   --h4-size: 13px; --h4-lh: 1.45;
 
-  --body-size: 14px;  --body-lh: 1.7;
-  --body-lg-size: 15px; --body-lg-lh: 1.65;
+  --body-size: 15px;  --body-lh: 1.7;
+  --body-lg-size: 16px; --body-lg-lh: 1.65;
   --small-size: 12.5px; --small-lh: 1.5;
   --xs-size: 11.5px;    --xs-lh: 1.4;
   --text-measure: 82ch;
@@ -273,7 +305,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
    PAGE HEAD
    ========================================================================= */
 
-.page-head { margin-bottom: var(--space-12); }
+.page-head { margin-bottom: var(--space-6); }
 
 .page-stack {
   max-width: var(--text-measure);
@@ -314,7 +346,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 .page-head .title em::after  { content: ']'; opacity: 0.55; margin-left: 1px; }
 
 .page-head .lede {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75;
   color: var(--fg-2);
   max-width: var(--text-measure);
@@ -368,7 +400,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 
 .prose { color: var(--fg-2); }
 .prose p + p { margin-top: var(--space-4); }
-.prose p { font-size: 14.5px; line-height: 1.8; font-family: var(--font-mono); }
+.prose p { font-size: 15.5px; line-height: 1.8; font-family: var(--font-mono); }
 .prose a { color: var(--cyan-600); text-decoration: underline; text-underline-offset: 3px; }
 .prose a:hover { color: #a8d1e8; }
 .prose strong { color: var(--fg-1); font-weight: 600; }
@@ -380,7 +412,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   margin: 0;
 }
 .about-list li {
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.8;
   font-family: var(--font-mono);
   color: var(--fg-2);
@@ -467,7 +499,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 .log .what { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 
 .log .what a.title {
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: var(--fg-1);
   font-weight: 700;
   line-height: 1.4;
@@ -618,7 +650,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 
 .experience-summary,
 .experience-env {
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.7;
   color: var(--fg-2);
 }
@@ -642,7 +674,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 
 .experience-points li {
   color: var(--fg-2);
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.7;
 }
 
@@ -702,7 +734,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   display: flex;
   align-items: baseline;
   gap: var(--space-3);
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: var(--fg-2);
   line-height: 1.55;
   font-family: var(--font-mono);
@@ -748,7 +780,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 
 .contact-list .value {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 15px;
   color: var(--fg-1);
 }
 .contact-list .value a { color: var(--cyan-600); }
@@ -813,7 +845,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 .intro h1 em::after  { content: ']'; opacity: 0.55; margin-left: 1px; }
 
 .intro .blurb {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75;
   color: var(--fg-2);
   max-width: var(--text-measure);
