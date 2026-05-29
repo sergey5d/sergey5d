@@ -7,6 +7,5 @@ for src in *.bark; do
       continue
       ;;
   esac
-  out="${src%.bark}.html"
-  go run braketo.go "$src" > "$out"
 done
+go run bark.go gen "*.bark"

@@ -14,9 +14,9 @@ import (
 //
 //   [ body ]                                   -> <div>body</div>
 //   [p body]                                   -> <p>body</p>
-//   [h1 @intro <: hero, title {data-mode="demo"} Hello]
+//   [h1 @intro <: hero, title data-mode=demo | Hello]
 //     -> <h1 id="intro" class="hero title" data-mode="demo">Hello</h1>
-//   [p @id1 @id2 <: body {attr1=value attr2="string value"} text]
+//   [p @id1 @id2 <: body attr1=value attr2="string value" | text]
 //   [a href=/docs target=_blank | Read more]
 //
 // Rules:
@@ -27,8 +27,7 @@ import (
 //   - <: class1, class2 stores class names; commas separate classes.
 //     Because class names cannot contain spaces, the class list ends once the
 //     parser sees non-comma-separated text or another metadata block.
-//   - {...} stores arbitrary attributes as key=value pairs.
-//   - Bare key=value attributes are also allowed before a "|" body separator.
+//   - Bare key=value attributes are allowed before a "|" body separator.
 //   - Nested [...] blocks are parsed recursively.
 
 type parser struct {
@@ -189,15 +188,10 @@ func (p *parser) parseNode() (*node, error) {
 				return nil, err
 			}
 			n.Classes = items
-		case '{':
-			attrs, err := p.parsePropsBlock()
-			if err != nil {
-				return nil, err
-			}
-			for k, v := range attrs {
-				n.Attrs[k] = v
-			}
 		default:
+			if p.peek() == '{' {
+				return nil, fmt.Errorf("curly-brace attribute blocks are no longer supported at rune %d", p.pos)
+			}
 			if p.looksLikeBareAttr() {
 				key, value, err := p.parseBareAttr()
 				if err != nil {
@@ -346,114 +340,6 @@ func (p *parser) parseBareAttr() (string, string, error) {
 	return key, value, nil
 }
 
-func (p *parser) parsePropsBlock() (map[string]string, error) {
-	if err := p.expect('{'); err != nil {
-		return nil, err
-	}
-	raw := p.readUntilMatching('}')
-	if raw == "" && p.eof() {
-		return nil, fmt.Errorf("unterminated {...} block")
-	}
-
-	attrs := map[string]string{}
-
-	for _, assignment := range splitAssignments(raw) {
-		parts := strings.SplitN(assignment, "=", 2)
-		if len(parts) != 2 {
-			continue
-		}
-		key := strings.TrimSpace(parts[0])
-		key = strings.Trim(key, `"`)
-		key = strings.Trim(key, `'`)
-		value := strings.TrimSpace(parts[1])
-		value = strings.Trim(value, `"`)
-		value = strings.Trim(value, `'`)
-		attrs[key] = value
-	}
-	return attrs, nil
-}
-
-func splitCSVRespectingQuotes(raw string) []string {
-	var out []string
-	var cur strings.Builder
-	inQuote := rune(0)
-
-	flush := func() {
-		part := strings.TrimSpace(cur.String())
-		part = strings.Trim(part, `"`)
-		part = strings.Trim(part, `'`)
-		if part != "" {
-			out = append(out, part)
-		}
-		cur.Reset()
-	}
-
-	for _, r := range raw {
-		if inQuote != 0 {
-			if r == inQuote {
-				inQuote = 0
-			} else {
-				cur.WriteRune(r)
-			}
-			continue
-		}
-		switch r {
-		case '"', '\'':
-			inQuote = r
-		case ',':
-			flush()
-		default:
-			cur.WriteRune(r)
-		}
-	}
-	flush()
-	return out
-}
-
-func splitAssignments(raw string) []string {
-	var out []string
-	var cur strings.Builder
-	inQuote := rune(0)
-	seenEquals := false
-
-	flush := func() {
-		part := strings.TrimSpace(cur.String())
-		if part != "" {
-			out = append(out, part)
-		}
-		cur.Reset()
-		seenEquals = false
-	}
-
-	for _, r := range raw {
-		if inQuote != 0 {
-			cur.WriteRune(r)
-			if r == inQuote {
-				inQuote = 0
-			}
-			continue
-		}
-		switch r {
-		case '"', '\'':
-			inQuote = r
-			cur.WriteRune(r)
-		case '=':
-			seenEquals = true
-			cur.WriteRune(r)
-		case ' ', '\n', '\t', '\r':
-			if seenEquals {
-				flush()
-			} else {
-				cur.WriteRune(r)
-			}
-		default:
-			cur.WriteRune(r)
-		}
-	}
-	flush()
-	return out
-}
-
 func (p *parser) parseIDShortcut() (string, error) {
 	if err := p.expect('@'); err != nil {
 		return "", err
@@ -471,28 +357,6 @@ func (p *parser) parseIDShortcut() (string, error) {
 		return "", fmt.Errorf("expected id after @ at rune %d", p.pos)
 	}
 	return string(p.src[start:p.pos]), nil
-}
-
-func (p *parser) readUntilMatching(close rune) string {
-	start := p.pos
-	inQuote := rune(0)
-	for !p.eof() {
-		r := p.next()
-		if inQuote != 0 {
-			if r == inQuote {
-				inQuote = 0
-			}
-			continue
-		}
-		if r == '"' || r == '\'' {
-			inQuote = r
-			continue
-		}
-		if r == close {
-			return string(p.src[start : p.pos-1])
-		}
-	}
-	return ""
 }
 
 func (p *parser) readUntil(stop rune) string {
