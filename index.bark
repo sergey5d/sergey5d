@@ -8,14 +8,14 @@
     [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
-    [header <: site-header data-screen-label=Header
-      [<: shell
-        [a <: wordmark href=index.html aria-label=Home
-          [span <: dot]
+    [header :site-header data-screen-label=Header
+      [:shell
+        [a :wordmark href=index.html aria-label=Home
+          [span :dot]
           [span Sergey Denisov]
         ]
-        [nav <: nav aria-label=Primary
-          [a <: is-active href=index.html | Home]
+        [nav :nav aria-label=Primary
+          [a :is-active href=index.html | Home]
           [a href=projects.html | Experience]
           [a href=blog.html | Blog]
           [a href=about.html | About]
@@ -24,26 +24,26 @@
       ]
     ]
     [main data-screen-label=Home
-      [<: shell
-        [<: page-stack
-          [<: page-head
-            [<: eyebrow | currently · Tampa, FL]
-            [h1 <: title | Fighting entropy]
-            [p <: lede | Hi. I’m Sergey, a software engineer who spent most of my career building backend systems.]
+      [:shell
+        [:page-stack
+          [:page-head
+            [:eyebrow | currently · Tampa, FL]
+            [h1 :title | Fighting entropy]
+            [p :lede | Hi. I’m Sergey, a software engineer who spent most of my career building backend systems.]
           ]
-          [<: prose
+          [:prose
             [p I specialize in distributed systems, trading platforms, exchange infrastructure, messaging, and software where reliability matters.]
             [p
-              [a <: link href=about.html | A few more things about me →]
+              [a :link href=about.html | A few more things about me →]
             ]
           ]
         ]
       ]
     ]
-    [footer <: site-footer
-      [<: shell
-        [span <: colophon | © 2026 · built across OpenAI and Anthropic datacenters]
-        [<: links
+    [footer :site-footer
+      [:shell
+        [span :colophon | © 2026 · built across OpenAI and Anthropic datacenters]
+        [:links
           [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
           [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
           [a href=contact.html | more →]

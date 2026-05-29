@@ -92,7 +92,11 @@ def bark_node(
         head += tag
 
     if classes:
-        head += (" <: " if head != "[" else "<: ") + ", ".join(classes)
+        if head == "[":
+            head += f":{classes[0]}"
+            head += "".join(f" :{class_name}" for class_name in classes[1:])
+        else:
+            head += "".join(f" :{class_name}" for class_name in classes)
 
     if attrs:
         attr_bits = " ".join(f"{key}={format_attr_value(value)}" for key, value in attrs.items())
