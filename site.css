@@ -119,6 +119,7 @@ html, body {
   color: var(--fg-2);
   font-family: var(--font-mono);
   font-size: var(--fs-body);
+  font-weight: 450;
   line-height: var(--body-lh);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
