@@ -1,14 +1,21 @@
-<html lang="en"><head><meta charset="utf-8"></meta>
-    <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Experience — Sergey Denisov</title>
-    <link href="icon.png" rel="icon" type="image/png"></link>
-    <link href="site.css" rel="stylesheet"></link>
+    <link href="icon.png" rel="icon" type="image/png">
+    <link href="site.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   </head>
-  <body><header class="site-header" data-screen-label="Header"><div class="shell"><a class="wordmark" aria-label="Home" href="index.html"><span class="dot"></span>
+  <body>
+    <header class="site-header" data-screen-label="Header">
+      <div class="shell">
+        <a class="wordmark" aria-label="Home" href="index.html">
+          <span class="dot"></span>
           <span>Sergey Denisov</span>
         </a>
-        <nav class="nav" aria-label="Primary"><a href="index.html">Home</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
           <a class="is-active" href="projects.html">Experience</a>
           <a href="blog.html">Blog</a>
           <a href="about.html">About</a>
@@ -16,22 +23,33 @@
         </nav>
       </div>
     </header>
-    <main data-screen-label="Experience"><div class="shell"><div class="page-stack"><div class="page-head"><div class="eyebrow">// experience</div>
+    <main data-screen-label="Experience">
+      <div class="shell">
+        <div class="page-stack">
+          <div class="page-head">
+            <div class="eyebrow">// experience</div>
             <h1 class="title">Systems, finance, and responsibility</h1>
             <p class="lede">Most of my work has lived in trading, backend-heavy distributed systems, messaging, APIs, and the steady delivery of reliable code.</p>
           </div>
-          <section class="experience"><article class="experience-item"><div class="experience-head"><div><h2>Gemini Crypto Exchange</h2>
+          <section class="experience">
+            <article class="experience-item">
+              <div class="experience-head">
+                <div>
+                  <h2>Gemini Crypto Exchange</h2>
                   <p class="experience-role">Staff Software Engineer · Order Management</p>
                 </div>
-                <div class="experience-meta"><span>Remote (US)</span>
+                <div class="experience-meta">
+                  <span>Remote (US)</span>
                   <span class="tnum">2022 – Feb 2026</span>
                 </div>
               </div>
               <p class="experience-summary">Crypto exchange and custodian supporting spot and derivatives trading, equities, and event contracts.</p>
-              <p class="experience-env"><strong>Environment:</strong>
+              <p class="experience-env">
                 Scala, Go, Python, TypeScript, React, Kafka, Bazel, gRPC (Protobuf), PostgreSQL, Redis, Kubernetes (EKS), AWS, Terraform, Helm, Docker, Harness, Jenkins, GitHub Actions, Claude Code
+                <strong>Environment:</strong>
               </p>
-              <ul class="experience-points"><li>Led a team of 4 engineers; owned execution, code quality, and mentoring.</li>
+              <ul class="experience-points">
+                <li>Led a team of 4 engineers; owned execution, code quality, and mentoring.</li>
                 <li>Top-10 GitHub contributor in the company monorepo.</li>
                 <li>Led migration from hardcoded asset and instrument definitions to service-driven dynamic configuration, updating SBE message schemas, evolving database schemas, and modifying large parts of the monorepo while maintaining production stability. Built TypeScript self-serve admin tooling with validation and audit trails so business users could safely manage assets and instruments without engineering involvement.</li>
                 <li>Implemented dynamic instrument restrictions at scale for 5,000 instruments and 300K restrictions: integrated a new restrictions service, introduced business-entity–based rules, added caching for efficient evaluation, and migrated legacy logic. Delivered admin tooling with a React UI and audit history that removed SQL from the restriction update workflow and enabled self-serve availability management. Added Slack notifications for change visibility.</li>
@@ -43,18 +61,24 @@
                 <li>Developed and owned Datadog dashboards, monitors, and runbooks for order-ingress pipelines, improving detection and remediation of production issues.</li>
               </ul>
             </article>
-            <article class="experience-item"><div class="experience-head"><div><h2>Morgan Stanley</h2>
+            <article class="experience-item">
+              <div class="experience-head">
+                <div>
+                  <h2>Morgan Stanley</h2>
                   <p class="experience-role">Vice President / Senior Software Engineer · Credit Derivatives</p>
                 </div>
-                <div class="experience-meta"><span>New York, NY</span>
+                <div class="experience-meta">
+                  <span>New York, NY</span>
                   <span class="tnum">2015 – 2022</span>
                 </div>
               </div>
               <p class="experience-summary">Tradeflow: CDS ledger and lifecycle platform for credit derivatives, used by Operations and integrated with client trading and settlement systems across New York, London, and Hong Kong.</p>
-              <p class="experience-env"><strong>Environment:</strong>
+              <p class="experience-env">
                 Java 8, Scala, C#, Akka Streams, Kafka, Sybase, Spring, Gradle, Git
+                <strong>Environment:</strong>
               </p>
-              <ul class="experience-points"><li>Built a Scala bridge to feed trade data from a legacy Java trading system into a next-generation Scala risk platform using Akka Streams and Kafka.</li>
+              <ul class="experience-points">
+                <li>Built a Scala bridge to feed trade data from a legacy Java trading system into a next-generation Scala risk platform using Akka Streams and Kafka.</li>
                 <li>Delivered Book Move automation for moving thousands to tens of thousands of trades: automated account adjustments, fee-trade generation, and reporting. Implemented a two-phase rollout culminating in redesigned accounting behavior that retained realized payments and moved only unrealized ones, reducing operational risk.</li>
                 <li>Overhauled Credit Event Management tooling for hard credit events: improved trade eligibility discovery, reference entity and portfolio version updates, and fee application. Reduced execution time and eliminated routine developer involvement.</li>
                 <li>Re-architected synchronization of back-to-back trades with parent trades; reduced incidents from 2–3 per week to roughly 1–2 every 6 months, with the remaining issues largely unrelated to sync logic.</li>
@@ -62,35 +86,48 @@
                 <li>Drove stability improvements through server-side support and defect reduction, shifting support rotations from high-volume firefighting to mostly integration-related issues.</li>
               </ul>
             </article>
-            <article class="experience-item"><div class="experience-head"><div><h2>Markit (now part of S&amp;P Global)</h2>
+            <article class="experience-item">
+              <div class="experience-head">
+                <div>
+                  <h2>Markit (now part of S&amp;P Global)</h2>
                   <p class="experience-role">Vice President / Senior Software Engineer</p>
                 </div>
-                <div class="experience-meta"><span>New York, NY</span>
+                <div class="experience-meta">
+                  <span>New York, NY</span>
                   <span class="tnum">2009 – 2015</span>
                 </div>
               </div>
               <p class="experience-summary">Lead developer on Genpact KYC Services and Markit Hub, spanning secure portals, APIs, SSO, publishing pipelines, partner integrations, and reliability improvements.</p>
-              <p class="experience-env"><strong>Environment:</strong>
+              <p class="experience-env">
                 Java 7, Oracle, Tomcat, Spring Core, Spring MVC, Spring Security, Spring OAuth, Thymeleaf, AngularJS, JavaScript, Maven, Subversion
+                <strong>Environment:</strong>
               </p>
-              <ul class="experience-points"><li>Led development on Genpact KYC Services: a secure portal, API workflows, and integration services for KYC data and subscriptions.</li>
+              <ul class="experience-points">
+                <li>Led development on Genpact KYC Services: a secure portal, API workflows, and integration services for KYC data and subscriptions.</li>
                 <li>Led development on Markit Hub: a financial content aggregation and SSO platform with provider integrations and publishing pipelines across SOAP, CSV, and RSS feeds.</li>
                 <li>Drove platform migrations and reliability improvements across multiple internal and partner-facing services.</li>
               </ul>
             </article>
           </section>
-          <section class="section"><div class="section-head"><h2>Education</h2>
+          <section class="section">
+            <div class="section-head">
+              <h2>Education</h2>
             </div>
-            <div class="prose"><p><strong>Master of Science, Computer Systems Analysis</strong>
+            <div class="prose">
+              <p>
                 · Pacific National University, Russia
+                <strong>Master of Science, Computer Systems Analysis</strong>
               </p>
             </div>
           </section>
         </div>
       </div>
     </main>
-    <footer class="site-footer"><div class="shell"><span class="colophon">© 2026 · built across OpenAI and Anthropic datacenters</span>
-        <div class="links"><a href="https://github.com/sergey5d" rel="noreferrer" target="_blank">github</a>
+    <footer class="site-footer">
+      <div class="shell">
+        <span class="colophon">© 2026 · built across OpenAI and Anthropic datacenters</span>
+        <div class="links">
+          <a href="https://github.com/sergey5d" rel="noreferrer" target="_blank">github</a>
           <a href="https://www.linkedin.com/in/sadenisov/" rel="noreferrer" target="_blank">linkedin</a>
           <a href="contact.html">more →</a>
         </div>

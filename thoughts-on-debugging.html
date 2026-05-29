@@ -1,14 +1,21 @@
-<html lang="en"><head><meta charset="utf-8"></meta>
-    <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Thoughts on debugging — Sergey Denisov</title>
-    <link href="icon.png" rel="icon" type="image/png"></link>
-    <link href="site.css" rel="stylesheet"></link>
+    <link href="icon.png" rel="icon" type="image/png">
+    <link href="site.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   </head>
-  <body><header class="site-header" data-screen-label="Header"><div class="shell"><a class="wordmark" aria-label="Home" href="index.html"><span class="dot"></span>
+  <body>
+    <header class="site-header" data-screen-label="Header">
+      <div class="shell">
+        <a class="wordmark" aria-label="Home" href="index.html">
+          <span class="dot"></span>
           <span>Sergey Denisov</span>
         </a>
-        <nav class="nav" aria-label="Primary"><a href="index.html">Home</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
           <a href="projects.html">Experience</a>
           <a class="is-active" href="blog.html">Blog</a>
           <a href="about.html">About</a>
@@ -16,18 +23,25 @@
         </nav>
       </div>
     </header>
-    <main class="post" data-screen-label="Blog post"><div class="shell"><div class="page-stack"><a class="back-link" href="blog.html"><i data-lucide="arrow-left"></i>
-              all posts
+    <main class="post" data-screen-label="Blog post">
+      <div class="shell">
+        <div class="page-stack">
+          <a class="back-link" href="blog.html">
+            all posts
+            <i data-lucide="arrow-left"></i>
           </a>
-          <div class="page-head"><h1 class="title">Thoughts on debugging</h1>
-            <div class="post-meta"><span class="tnum">17 May 2026</span>
+          <div class="page-head">
+            <h1 class="title">Thoughts on debugging</h1>
+            <div class="post-meta">
+              <span class="tnum">17 May 2026</span>
               <span>·</span>
               <span>3 min</span>
               <span>·</span>
               <span>engineering</span>
             </div>
           </div>
-          <div class="prose"><p>In the past few months, there has been a flood of messages from SWEs trying to defend their stance that they are still relevant and their skills are needed in the post-LLM era, where the majority of the code is written by LLMs.</p>
+          <div class="prose">
+            <p>In the past few months, there has been a flood of messages from SWEs trying to defend their stance that they are still relevant and their skills are needed in the post-LLM era, where the majority of the code is written by LLMs.</p>
             <p>I won’t delve into the arguments of either AI denialists, who state that AI will collapse under the weight of the slop it produces, nor will I defend the side of AI pushers who overstate current LLM abilities.</p>
             <p>In this note, I want to discuss a common and recurring theme people raise: that it is impossible to do step-through debugging with LLM-generated code that nobody understands.</p>
             <p>First of all, I do not deny the complexity that LLM-generated code brings to large-system development. Most large code bases follow specific patterns that allow you to navigate through the system based on these anchors and comprehend intent and logic. When LLM-generated code breaks these often loosely defined conventions, it adds another layer of complexity and increases the comprehension burden.</p>
@@ -40,11 +54,14 @@
             <p>So these two factors - limits imposed by our dev environment and the complexity of the system - pushed me to stop using step-by-step debugging as a tool to verify the correctness of the code.</p>
             <p>Some readers may argue that unit tests may not cover all potential issues that might arise in distributed systems, and I totally agree with this. But step-through debugging is practical mostly in local or development-like environments, so it won’t help much with those problems either. My previous points about the extensive use of unit tests do not imply that the system should only have them and nothing else.</p>
             <p>In application development, you usually don’t need step-by-step debugging unless:</p>
-            <ul><li>You are working on a specific complex algorithm, and you would debug it in the context of a running unit test.</li>
+            <ul>
+              <li>You are working on a specific complex algorithm, and you would debug it in the context of a running unit test.</li>
             </ul>
-            <ul><li>You are working on some low-level code operating with memory allocation and pointers, i.e. in C and C++ like languages, with too many factors that can come into play and are too hard to foresee.</li>
+            <ul>
+              <li>You are working on some low-level code operating with memory allocation and pointers, i.e. in C and C++ like languages, with too many factors that can come into play and are too hard to foresee.</li>
             </ul>
-            <ul><li>You are working with a codebase that is not properly unit-tested and is overburdened by convoluted logic that you cannot comprehend.</li>
+            <ul>
+              <li>You are working with a codebase that is not properly unit-tested and is overburdened by convoluted logic that you cannot comprehend.</li>
             </ul>
             <p>I think that today, when most languages do not require manual memory management and engineers rarely create new complex algorithms, what most people have in mind is the last item.</p>
             <p>And here comes the trouble: of course, if you are relying on step-through debugging, LLM-generated code will make your life extremely hard. But your system is already in an unhealthy state. It either has insufficient test coverage, is not properly modularized, has side effects here and there, has problems with logic, or, most likely, all of these.</p>
@@ -55,8 +72,11 @@
         </div>
       </div>
     </main>
-    <footer class="site-footer"><div class="shell"><span class="colophon">© 2026 · built across OpenAI and Anthropic datacenters</span>
-        <div class="links"><a href="https://github.com/sergey5d" rel="noreferrer" target="_blank">github</a>
+    <footer class="site-footer">
+      <div class="shell">
+        <span class="colophon">© 2026 · built across OpenAI and Anthropic datacenters</span>
+        <div class="links">
+          <a href="https://github.com/sergey5d" rel="noreferrer" target="_blank">github</a>
           <a href="https://www.linkedin.com/in/sadenisov/" rel="noreferrer" target="_blank">linkedin</a>
           <a href="contact.html">more →</a>
         </div>
