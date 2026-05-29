@@ -1,12 +1,12 @@
 #!/usr/bin/env zsh
 set -euo pipefail
 
-for src in *.bracket; do
+for src in *.bark; do
   case "$src" in
-    sample.bracket)
+    sample.bark)
       continue
       ;;
   esac
-  out="${src%.bracket}.html"
+  out="${src%.bark}.html"
   go run braketo.go "$src" > "$out"
 done
