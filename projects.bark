@@ -1,29 +1,29 @@
-[html {lang=en}
+[html lang=en
   [head
-    [meta {charset=utf-8}]
-    [meta {name=viewport content="width=device-width, initial-scale=1"}]
+    [meta charset=utf-8]
+    [meta name=viewport content="width=device-width, initial-scale=1"]
     [title Experience — Sergey Denisov]
-    [link {rel=icon type=image/png href=icon.png}]
-    [link {rel=stylesheet href=site.css}]
-    [script {src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js}]
+    [link rel=icon type=image/png href=icon.png]
+    [link rel=stylesheet href=site.css]
+    [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
-    [header <: site-header {data-screen-label=Header}
+    [header <: site-header data-screen-label=Header
       [<: shell
-        [a <: wordmark {href=index.html aria-label=Home}
+        [a <: wordmark href=index.html aria-label=Home
           [span <: dot]
           [span Sergey Denisov]
         ]
-        [nav <: nav {aria-label=Primary}
-          [a {href=index.html} Home]
-          [a <: is-active {href=projects.html} Experience]
-          [a {href=blog.html} Blog]
-          [a {href=about.html} About]
-          [a {href=contact.html} Contact]
+        [nav <: nav aria-label=Primary
+          [a href=index.html | Home]
+          [a <: is-active href=projects.html | Experience]
+          [a href=blog.html | Blog]
+          [a href=about.html | About]
+          [a href=contact.html | Contact]
         ]
       ]
     ]
-    [main {data-screen-label=Experience}
+    [main data-screen-label=Experience
       [<: shell
         [<: page-stack
           [<: page-head
@@ -44,13 +44,16 @@
                 ]
               ]
               [p <: experience-summary | Crypto exchange and custodian supporting spot and derivatives trading, equities, and event contracts.]
-              [p <: experience-env [strong Environment:] Scala, Go, Python, TypeScript, React, Kafka, Bazel, gRPC (Protobuf), PostgreSQL, Redis, Kubernetes (EKS), AWS, Terraform, Helm, Docker, Harness, Jenkins, GitHub Actions, Claude Code]
+              [p <: experience-env
+                [strong Environment:]
+                Scala, Go, Python, TypeScript, React, Kafka, Bazel, gRPC (Protobuf), PostgreSQL, Redis, Kubernetes (EKS), AWS, Terraform, Helm, Docker, Harness, Jenkins, GitHub Actions, Claude Code
+              ]
               [ul <: experience-points
                 [li Led a team of 4 engineers; owned execution, code quality, and mentoring.]
                 [li Top-10 GitHub contributor in the company monorepo.]
                 [li Led migration from hardcoded asset and instrument definitions to service-driven dynamic configuration, updating SBE message schemas, evolving database schemas, and modifying large parts of the monorepo while maintaining production stability. Built TypeScript self-serve admin tooling with validation and audit trails so business users could safely manage assets and instruments without engineering involvement.]
                 [li Implemented dynamic instrument restrictions at scale for 5,000 instruments and 300K restrictions: integrated a new restrictions service, introduced business-entity–based rules, added caching for efficient evaluation, and migrated legacy logic. Delivered admin tooling with a React UI and audit history that removed SQL from the restriction update workflow and enabled self-serve availability management. Added Slack notifications for change visibility.]
-                [li Built incentives and leaderboards backend for derivatives trading with reproducible computations, eligibility logic, and auditable outputs: scheduled winner selection, P&amp;L and ROI aggregation, notifications, and REST APIs consumed by the UI.]
+                [li Built incentives and leaderboards backend for derivatives trading with reproducible computations, eligibility logic, and auditable outputs: scheduled winner selection, P&L and ROI aggregation, notifications, and REST APIs consumed by the UI.]
                 [li Contributed to Gemini’s Settlement Engine, enabling complex multi-asset clearing between institutional counterparties, and maintained the legacy Gemini Clearing Engine.]
                 [li Improved order lifecycle flows and onboarding by building and maintaining customer-facing REST APIs across order and institutional client pipelines, including ledger interactions for tracking transaction state and account balances.]
                 [li Delivered internal admin tools including bulk credit issuance used for asset delistings and customer offboarding; recognized by department leadership for streamlining operations.]
@@ -70,7 +73,10 @@
                 ]
               ]
               [p <: experience-summary | Tradeflow: CDS ledger and lifecycle platform for credit derivatives, used by Operations and integrated with client trading and settlement systems across New York, London, and Hong Kong.]
-              [p <: experience-env [strong Environment:] Java 8, Scala, C#, Akka Streams, Kafka, Sybase, Spring, Gradle, Git]
+              [p <: experience-env
+                [strong Environment:]
+                Java 8, Scala, C#, Akka Streams, Kafka, Sybase, Spring, Gradle, Git
+              ]
               [ul <: experience-points
                 [li Built a Scala bridge to feed trade data from a legacy Java trading system into a next-generation Scala risk platform using Akka Streams and Kafka.]
                 [li Delivered Book Move automation for moving thousands to tens of thousands of trades: automated account adjustments, fee-trade generation, and reporting. Implemented a two-phase rollout culminating in redesigned accounting behavior that retained realized payments and moved only unrealized ones, reducing operational risk.]
@@ -83,7 +89,7 @@
             [article <: experience-item
               [<: experience-head
                 [
-                  [h2 Markit (now part of S&amp;P Global)]
+                  [h2 Markit (now part of S&P Global)]
                   [p <: experience-role | Vice President / Senior Software Engineer]
                 ]
                 [<: experience-meta
@@ -92,7 +98,10 @@
                 ]
               ]
               [p <: experience-summary | Lead developer on Genpact KYC Services and Markit Hub, spanning secure portals, APIs, SSO, publishing pipelines, partner integrations, and reliability improvements.]
-              [p <: experience-env [strong Environment:] Java 7, Oracle, Tomcat, Spring Core, Spring MVC, Spring Security, Spring OAuth, Thymeleaf, AngularJS, JavaScript, Maven, Subversion]
+              [p <: experience-env
+                [strong Environment:]
+                Java 7, Oracle, Tomcat, Spring Core, Spring MVC, Spring Security, Spring OAuth, Thymeleaf, AngularJS, JavaScript, Maven, Subversion
+              ]
               [ul <: experience-points
                 [li Led development on Genpact KYC Services: a secure portal, API workflows, and integration services for KYC data and subscriptions.]
                 [li Led development on Markit Hub: a financial content aggregation and SSO platform with provider integrations and publishing pipelines across SOAP, CSV, and RSS feeds.]
@@ -105,7 +114,10 @@
               [h2 Education]
             ]
             [<: prose
-              [p [strong Master of Science, Computer Systems Analysis] · Pacific National University, Russia]
+              [p
+                [strong Master of Science, Computer Systems Analysis]
+                · Pacific National University, Russia
+              ]
             ]
           ]
         ]
@@ -115,9 +127,9 @@
       [<: shell
         [span <: colophon | © 2026 · built across OpenAI and Anthropic datacenters]
         [<: links
-          [a {href=https://github.com/sergey5d target=_blank rel=noreferrer} github]
-          [a {href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer} linkedin]
-          [a {href=contact.html} more →]
+          [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
+          [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
+          [a href=contact.html | more →]
         ]
       ]
     ]

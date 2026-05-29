@@ -17,6 +17,7 @@ import (
 //   [h1 @intro <: hero, title {data-mode="demo"} Hello]
 //     -> <h1 id="intro" class="hero title" data-mode="demo">Hello</h1>
 //   [p @id1 @id2 <: body {attr1=value attr2="string value"} text]
+//   [a href=/docs target=_blank | Read more]
 //
 // Rules:
 //   - A leading "[" starts an element.
@@ -27,6 +28,7 @@ import (
 //     Because class names cannot contain spaces, the class list ends once the
 //     parser sees non-comma-separated text or another metadata block.
 //   - {...} stores arbitrary attributes as key=value pairs.
+//   - Bare key=value attributes are also allowed before a "|" body separator.
 //   - Nested [...] blocks are parsed recursively.
 
 type parser struct {
@@ -196,6 +198,14 @@ func (p *parser) parseNode() (*node, error) {
 				n.Attrs[k] = v
 			}
 		default:
+			if p.looksLikeBareAttr() {
+				key, value, err := p.parseBareAttr()
+				if err != nil {
+					return nil, err
+				}
+				n.Attrs[key] = value
+				continue
+			}
 			goto body
 		}
 	}
@@ -274,6 +284,66 @@ func (p *parser) parseClassList() ([]string, error) {
 	}
 
 	return classes, nil
+}
+
+func (p *parser) looksLikeBareAttr() bool {
+	if p.eof() {
+		return false
+	}
+	i := p.pos
+	if !isAttrNamePart(p.src[i]) {
+		return false
+	}
+	for i < len(p.src) && isAttrNamePart(p.src[i]) {
+		i++
+	}
+	return i < len(p.src) && p.src[i] == '='
+}
+
+func (p *parser) parseBareAttr() (string, string, error) {
+	start := p.pos
+	for !p.eof() && isAttrNamePart(p.peek()) {
+		p.pos++
+	}
+	if start == p.pos {
+		return "", "", fmt.Errorf("expected attribute name at rune %d", p.pos)
+	}
+	key := string(p.src[start:p.pos])
+
+	if err := p.expect('='); err != nil {
+		return "", "", err
+	}
+
+	if p.eof() {
+		return "", "", fmt.Errorf("expected attribute value for %q at rune %d", key, p.pos)
+	}
+
+	var value string
+	switch p.peek() {
+	case '"', '\'':
+		quote := p.next()
+		start = p.pos
+		for !p.eof() && p.peek() != quote {
+			p.pos++
+		}
+		if p.eof() {
+			return "", "", fmt.Errorf("unterminated quoted value for %q", key)
+		}
+		value = string(p.src[start:p.pos])
+		p.pos++
+	default:
+		start = p.pos
+		for !p.eof() {
+			r := p.peek()
+			if unicode.IsSpace(r) || r == '|' || r == '[' || r == ']' {
+				break
+			}
+			p.pos++
+		}
+		value = string(p.src[start:p.pos])
+	}
+
+	return key, value, nil
 }
 
 func (p *parser) parsePropsBlock() (map[string]string, error) {
@@ -482,6 +552,10 @@ func isNamePart(r rune) bool {
 
 func isClassNamePart(r rune) bool {
 	return isNamePart(r)
+}
+
+func isAttrNamePart(r rune) bool {
+	return unicode.IsLetter(r) || unicode.IsDigit(r) || r == '-' || r == '_' || r == ':'
 }
 
 func escapeHTML(s string) string {

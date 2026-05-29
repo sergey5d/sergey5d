@@ -21,15 +21,18 @@
             <p class="lede">I read every message and often reply. Recruiters, don&#39;t be afraid, I promise I’m friendly.</p>
           </div>
           <ul class="contact-list"><li><span class="channel">Email</span>
-              <span class="value"><a class="link" href="mailto:contact@sergeyd.dev">contact@sergeyd.dev</a></span>
+              <span class="value"><a class="link" href="mailto:contact@sergeyd.dev">contact@sergeyd.dev</a>
+              </span>
               <a class="copy-btn" href="mailto:contact@sergeyd.dev">open ↗</a>
             </li>
             <li><span class="channel">GitHub</span>
-              <span class="value"><a class="link" href="https://github.com/sergey5d" rel="noreferrer" target="_blank">github.com/sergey5d</a></span>
+              <span class="value"><a class="link" href="https://github.com/sergey5d" rel="noreferrer" target="_blank">github.com/sergey5d</a>
+              </span>
               <a class="copy-btn" href="https://github.com/sergey5d" rel="noreferrer" target="_blank">open ↗</a>
             </li>
             <li><span class="channel">LinkedIn</span>
-              <span class="value"><a class="link" href="https://www.linkedin.com/in/sadenisov/" rel="noreferrer" target="_blank">linkedin.com/in/sadenisov</a></span>
+              <span class="value"><a class="link" href="https://www.linkedin.com/in/sadenisov/" rel="noreferrer" target="_blank">linkedin.com/in/sadenisov</a>
+              </span>
               <a class="copy-btn" href="https://www.linkedin.com/in/sadenisov/" rel="noreferrer" target="_blank">open ↗</a>
             </li>
           </ul>
@@ -43,6 +46,6 @@
         </div>
       </div>
     </footer>
-    <script>lucide.createIcons();</script>
+    <script>lucide.createIcons(); // Tiny copy-to-clipboard for buttons with data-copy document.querySelectorAll(&#39;button.copy-btn<data-copy></data-copy>&#39;).forEach((btn) =&gt; { btn.addEventListener(&#39;click&#39;, async () =&gt; { const text = btn.getAttribute(&#39;data-copy&#39;); try { await navigator.clipboard.writeText(text); const original = btn.textContent; btn.textContent = &#39;copied&#39;; btn.classList.add(&#39;is-copied&#39;); setTimeout(() =&gt; { btn.textContent = original; btn.classList.remove(&#39;is-copied&#39;); }, 1400); } catch (e) { btn.textContent = &#39;select &amp; copy&#39;; } }); });</script>
   </body>
 </html>

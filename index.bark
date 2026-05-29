@@ -1,29 +1,29 @@
-[html {lang=en}
+[html lang=en
   [head
-    [meta {charset=utf-8}]
-    [meta {name=viewport content="width=device-width, initial-scale=1"}]
+    [meta charset=utf-8]
+    [meta name=viewport content="width=device-width, initial-scale=1"]
     [title Sergey Denisov — software engineer]
-    [link {rel=icon type=image/png href=icon.png}]
-    [link {rel=stylesheet href=site.css}]
-    [script {src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js}]
+    [link rel=icon type=image/png href=icon.png]
+    [link rel=stylesheet href=site.css]
+    [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
-    [header <: site-header {data-screen-label=Header}
+    [header <: site-header data-screen-label=Header
       [<: shell
-        [a <: wordmark {href=index.html aria-label=Home}
+        [a <: wordmark href=index.html aria-label=Home
           [span <: dot]
           [span Sergey Denisov]
         ]
-        [nav <: nav {aria-label=Primary}
-          [a <: is-active {href=index.html} Home]
-          [a {href=projects.html} Experience]
-          [a {href=blog.html} Blog]
-          [a {href=about.html} About]
-          [a {href=contact.html} Contact]
+        [nav <: nav aria-label=Primary
+          [a <: is-active href=index.html | Home]
+          [a href=projects.html | Experience]
+          [a href=blog.html | Blog]
+          [a href=about.html | About]
+          [a href=contact.html | Contact]
         ]
       ]
     ]
-    [main {data-screen-label=Home}
+    [main data-screen-label=Home
       [<: shell
         [<: page-stack
           [<: page-head
@@ -33,7 +33,9 @@
           ]
           [<: prose
             [p I specialize in distributed systems, trading platforms, exchange infrastructure, messaging, and software where reliability matters.]
-            [p [a <: link {href=about.html} A few more things about me →]]
+            [p
+              [a <: link href=about.html | A few more things about me →]
+            ]
           ]
         ]
       ]
@@ -42,9 +44,9 @@
       [<: shell
         [span <: colophon | © 2026 · built across OpenAI and Anthropic datacenters]
         [<: links
-          [a {href=https://github.com/sergey5d target=_blank rel=noreferrer} github]
-          [a {href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer} linkedin]
-          [a {href=contact.html} more →]
+          [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
+          [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
+          [a href=contact.html | more →]
         ]
       ]
     ]
