@@ -348,26 +348,34 @@ def page_shell(title: str, main_attrs: dict[str, str], main_children: list[str],
 
 def render_post_page(post: Post) -> list[str]:
     prose_children = post.body_lines
-    main_children = (
+    main_children = bark_node(
+        "",
+        classes=["page-stack"],
+        children=
         bark_node(
             "a",
             classes=["back-link"],
             attrs={"href": "blog.html"},
             children=bark_node("i", attrs={"data-lucide": "arrow-left"}) + ["  all posts"],
         )
-        + bark_node("h1", classes=["title"], body=post.title)
         + bark_node(
             "",
-            classes=["post-meta"],
+            classes=["page-head"],
             children=
-            bark_node("span", classes=["tnum"], body=post.date_display)
-            + bark_node("span", body="·", use_pipe=False)
-            + bark_node("span", body=post.reading_time, use_pipe=False)
-            + bark_node("span", body="·", use_pipe=False)
-            + bark_node("span", body=post.category, use_pipe=False),
+            bark_node("h1", classes=["title"], body=post.title)
+            + bark_node(
+                "",
+                classes=["post-meta"],
+                children=
+                bark_node("span", classes=["tnum"], body=post.date_display)
+                + bark_node("span", body="·", use_pipe=False)
+                + bark_node("span", body=post.reading_time, use_pipe=False)
+                + bark_node("span", body="·", use_pipe=False)
+                + bark_node("span", body=post.category, use_pipe=False),
+            ),
         )
         + bark_node("", classes=["prose"], children=prose_children)
-        + bark_node("script", body="lucide.createIcons();", use_pipe=False)
+        + bark_node("script", body="lucide.createIcons();", use_pipe=False),
     )
 
     return page_shell(
