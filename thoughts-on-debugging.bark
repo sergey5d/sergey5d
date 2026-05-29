@@ -8,39 +8,39 @@
     [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
-    [header <: site-header data-screen-label=Header
-      [<: shell
-        [a <: wordmark href=index.html aria-label=Home
-          [span <: dot]
+    [header :site-header data-screen-label=Header
+      [:shell
+        [a :wordmark href=index.html aria-label=Home
+          [span :dot]
           [span Sergey Denisov]
         ]
-        [nav <: nav aria-label=Primary
+        [nav :nav aria-label=Primary
           [a href=index.html | Home]
           [a href=projects.html | Experience]
-          [a <: is-active href=blog.html | Blog]
+          [a :is-active href=blog.html | Blog]
           [a href=about.html | About]
           [a href=contact.html | Contact]
         ]
       ]
     ]
-    [main <: post data-screen-label="Blog post"
-      [<: shell
-        [<: page-stack
-          [a <: back-link href=blog.html
+    [main :post data-screen-label="Blog post"
+      [:shell
+        [:page-stack
+          [a :back-link href=blog.html
             [i data-lucide=arrow-left]
               all posts
           ]
-          [<: page-head
-            [h1 <: title | Thoughts on debugging]
-            [<: post-meta
-              [span <: tnum | 17 May 2026]
+          [:page-head
+            [h1 :title | Thoughts on debugging]
+            [:post-meta
+              [span :tnum | 17 May 2026]
               [span ·]
               [span 3 min]
               [span ·]
               [span engineering]
             ]
           ]
-          [<: prose
+          [:prose
             [p In the past few months, there has been a flood of messages from SWEs trying to defend their stance that they are still relevant and their skills are needed in the post-LLM era, where the majority of the code is written by LLMs.]
             [p I won’t delve into the arguments of either AI denialists, who state that AI will collapse under the weight of the slop it produces, nor will I defend the side of AI pushers who overstate current LLM abilities.]
             [p In this note, I want to discuss a common and recurring theme people raise: that it is impossible to do step-through debugging with LLM-generated code that nobody understands.]
@@ -72,10 +72,10 @@
         ]
       ]
     ]
-    [footer <: site-footer
-      [<: shell
-        [span <: colophon | © 2026 · built across OpenAI and Anthropic datacenters]
-        [<: links
+    [footer :site-footer
+      [:shell
+        [span :colophon | © 2026 · built across OpenAI and Anthropic datacenters]
+        [:links
           [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
           [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
           [a href=contact.html | more →]

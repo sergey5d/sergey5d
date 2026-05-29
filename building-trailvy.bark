@@ -8,39 +8,39 @@
     [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
-    [header <: site-header data-screen-label=Header
-      [<: shell
-        [a <: wordmark href=index.html aria-label=Home
-          [span <: dot]
+    [header :site-header data-screen-label=Header
+      [:shell
+        [a :wordmark href=index.html aria-label=Home
+          [span :dot]
           [span Sergey Denisov]
         ]
-        [nav <: nav aria-label=Primary
+        [nav :nav aria-label=Primary
           [a href=index.html | Home]
           [a href=projects.html | Experience]
-          [a <: is-active href=blog.html | Blog]
+          [a :is-active href=blog.html | Blog]
           [a href=about.html | About]
           [a href=contact.html | Contact]
         ]
       ]
     ]
-    [main <: post data-screen-label="Blog post"
-      [<: shell
-        [<: page-stack
-          [a <: back-link href=blog.html
+    [main :post data-screen-label="Blog post"
+      [:shell
+        [:page-stack
+          [a :back-link href=blog.html
             [i data-lucide=arrow-left]
               all posts
           ]
-          [<: page-head
-            [h1 <: title | Building Travelvy.com]
-            [<: post-meta
-              [span <: tnum | 16 May 2026]
+          [:page-head
+            [h1 :title | Building Travelvy.com]
+            [:post-meta
+              [span :tnum | 16 May 2026]
               [span ·]
               [span 4 min]
               [span ·]
               [span projects]
             ]
           ]
-          [<: prose
+          [:prose
             [p We built Travelvy.com about 10 years ago, when, like many aspiring entrepreneurs, I decided I wanted to build something big and went with the only idea that came to mind. It was a travel-planning website with a curated set of places to visit. It was not a particularly bright one, to be honest, though in my defense I was not very far from most of my peers at the time.]
             [p There were three of us: two founders and one engineer we hired remotely.]
             [p It was an interesting journey: finding someone in Edinburgh to photograph the places, realizing he did not really know how to do it, finding another Brit to write proper descriptions, and then building the whole thing. There were also plenty of funny stories about dealing with other people along the way, the kind I am sure any founder could tell, but that probably deserves a separate post.]
@@ -65,10 +65,10 @@
         ]
       ]
     ]
-    [footer <: site-footer
-      [<: shell
-        [span <: colophon | © 2026 · built across OpenAI and Anthropic datacenters]
-        [<: links
+    [footer :site-footer
+      [:shell
+        [span :colophon | © 2026 · built across OpenAI and Anthropic datacenters]
+        [:links
           [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
           [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
           [a href=contact.html | more →]

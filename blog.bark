@@ -5,7 +5,6 @@
     [title Blog — Sergey Denisov]
     [link rel=icon type=image/png href=icon.png]
     [link rel=stylesheet href=site.css]
-    [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
     [header :site-header data-screen-label=Header
@@ -83,6 +82,5 @@
         ]
       ]
     ]
-    [script lucide.createIcons();]
   ]
 ]

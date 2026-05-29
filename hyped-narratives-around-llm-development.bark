@@ -8,39 +8,39 @@
     [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
-    [header <: site-header data-screen-label=Header
-      [<: shell
-        [a <: wordmark href=index.html aria-label=Home
-          [span <: dot]
+    [header :site-header data-screen-label=Header
+      [:shell
+        [a :wordmark href=index.html aria-label=Home
+          [span :dot]
           [span Sergey Denisov]
         ]
-        [nav <: nav aria-label=Primary
+        [nav :nav aria-label=Primary
           [a href=index.html | Home]
           [a href=projects.html | Experience]
-          [a <: is-active href=blog.html | Blog]
+          [a :is-active href=blog.html | Blog]
           [a href=about.html | About]
           [a href=contact.html | Contact]
         ]
       ]
     ]
-    [main <: post data-screen-label="Blog post"
-      [<: shell
-        [<: page-stack
-          [a <: back-link href=blog.html
+    [main :post data-screen-label="Blog post"
+      [:shell
+        [:page-stack
+          [a :back-link href=blog.html
             [i data-lucide=arrow-left]
               all posts
           ]
-          [<: page-head
-            [h1 <: title | Hyped Narratives Around LLM Development]
-            [<: post-meta
-              [span <: tnum | 22 May 2026]
+          [:page-head
+            [h1 :title | Hyped Narratives Around LLM Development]
+            [:post-meta
+              [span :tnum | 22 May 2026]
               [span ·]
               [span 6 min]
               [span ·]
               [span engineering]
             ]
           ]
-          [<: prose
+          [:prose
             [p The common narrative right now is that great engineers are 100x more productive. I truly believe AI is an amplifier of intelligence and productivity, and thus the gap between the most and least productive engineers has significantly increased.]
             [p That said, I want to point out that this alleged 100x amplification is taken from samples that do not represent the whole picture.]
             [p It is quite easy to rewrite your existing system in a new language. But is it a change in paradigm, and should it be taken as an example? It has been possible to translate documents using Google Translate for quite a few years now. The quality of translation was mediocre, and I would argue this looks very similar to the quality of code produced by many LLM-driven rewrites.]
@@ -65,10 +65,10 @@
         ]
       ]
     ]
-    [footer <: site-footer
-      [<: shell
-        [span <: colophon | © 2026 · built across OpenAI and Anthropic datacenters]
-        [<: links
+    [footer :site-footer
+      [:shell
+        [span :colophon | © 2026 · built across OpenAI and Anthropic datacenters]
+        [:links
           [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
           [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
           [a href=contact.html | more →]
