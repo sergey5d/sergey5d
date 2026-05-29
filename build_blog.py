@@ -250,7 +250,7 @@ def render_post_page(post: Post) -> str:
     content = f"""
     <a href="blog.html" class="back-link"><i data-lucide="arrow-left"></i> all posts</a>
 
-    <h1>{html.escape(post.title)}</h1>
+    <h1 class="title">{html.escape(post.title)}</h1>
 
     <div class="post-meta">
       <span class="tnum">{post.date_display}</span>
@@ -289,7 +289,7 @@ def render_blog_index(posts: list[Post]) -> str:
             f"""        <li>
           <span class="when tnum">{post.date_display}</span>
           <div class="what">
-            <a href="{post.file_name}" class="title">{html.escape(post.title)}</a>
+            <h3><a href="{post.file_name}">{html.escape(post.title)}</a></h3>
             <span class="excerpt">{html.escape(post.excerpt)}</span>
           </div>
           <span class="kind">{html.escape(post.reading_time)}</span>

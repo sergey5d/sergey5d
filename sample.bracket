@@ -1,0 +1,15 @@
+[html
+  [head
+    [title Braketo sample]
+  ]
+  [body
+    [main @root @id <: shell, tile {data-mode=demo}
+      [h1 @hero <: header {data-level=1} Fighting entropy]
+      [p Hi. I’m Sergey, a software engineer who spent most of my career building backend systems.]
+      [p I specialize in distributed systems, trading platforms, exchange infrastructure, messaging, and software where reliability matters.]
+      [@links <: links {data-kind=nav}
+        [a {href=about.html} A few more things about me →]
+      ]
+    ]
+  ]
+]

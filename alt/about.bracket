@@ -1,0 +1,62 @@
+[html {lang=en}
+  [head
+    [meta {charset=utf-8}]
+    [meta {name=viewport content="width=device-width, initial-scale=1"}]
+    [title About — Sergey Denisov]
+    [link {rel=icon type=image/png href=icon.png}]
+    [link {rel=stylesheet href=site.css}]
+    [script {src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js}]
+  ]
+  [body
+    [header <: site-header {data-screen-label=Header}
+      [<: shell
+        [a <: wordmark {href=index.html aria-label=Home}
+          [span <: dot]
+          [span Sergey Denisov]
+        ]
+        [nav <: nav {aria-label=Primary}
+          [a {href=index.html} Home]
+          [a {href=projects.html} Experience]
+          [a {href=blog.html} Blog]
+          [a <: is-active {href=about.html} About]
+          [a {href=contact.html} Contact]
+        ]
+      ]
+    ]
+    [main {data-screen-label=About}
+      [<: shell
+        [<: page-stack
+          [<: page-head
+            [<: eyebrow | // about]
+            [h1 <: title | A few things about me]
+            [p <: lede | Some background, for anyone curious how I ended up here.]
+          ]
+          [<: prose
+            [ul <: about-list
+              [li I grew up and studied in a mid-sized Russian city in what Russians call the Far East and what most Americans would consider part of Siberia. It was much closer to China than to Moscow.]
+              [li I studied C++ during my first year at university using a book on Borland C++, though I cannot recall the author now. I remember struggling with the three-part [code for] loop for about a week, but once it clicked, everything else felt easy.]
+              [li Later, I learned Java and built a chat application, because chats were the thing at the time. I was not trying to turn it into anything serious; I just wanted to see whether I could build one too. It used applets and AWT, and it was full of multithread bugs.]
+              [li In my twenties, Perl was my favorite language. It was also disappointing to watch Perl 6 arrive so late that it never really gained traction.]
+              [li Programming languages have always excited me. I studied many of them over the years. In general most of them are very similar, with Haskell standing out and Prolog being a notable weirdo.]
+              [li I am currently learning Spanish, and it turns out learning a third language is much easier than learning a second. Qué tal, amigo!]
+              [li At university I also wrote in assembly language for both x86 and an embedded RISC controller. Later, it was a revelation to see how much of that work could be done in C without losing much, and how directly C maps to machine instructions.]
+              [li My degree was in computers and systems design, but the Russian chip industry died long before I graduated, so I either had to pivot to soldering printers or to writing software. I was never a fan of soldering, so here we are.]
+              [li I was a PhD student for a while, though I did not finish the program, and taught database and networking courses at my alma mater for two semesters.]
+            ]
+          ]
+        ]
+      ]
+    ]
+    [footer <: site-footer
+      [<: shell
+        [span <: colophon | © 2026 · built across OpenAI and Anthropic datacenters]
+        [<: links
+          [a {href=https://github.com/sergey5d target=_blank rel=noreferrer} github]
+          [a {href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer} linkedin]
+          [a {href=contact.html} more →]
+        ]
+      ]
+    ]
+    [script lucide.createIcons();]
+  ]
+]
