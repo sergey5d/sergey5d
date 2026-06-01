@@ -14,7 +14,7 @@ POSTS_DIR = ROOT / "posts"
 BLOG_INDEX_BARK = ROOT / "blog.bark"
 
 SITE_TITLE = "Sergey Denisov"
-COLLOPHON = "© 2026 · built across OpenAI and Anthropic datacenters"
+COLLOPHON = "© 2026 Sergey Denisov"
 FOOTER_LINKS = [
     ("https://github.com/sergey5d", "github"),
     ("https://www.linkedin.com/in/sadenisov/", "linkedin"),

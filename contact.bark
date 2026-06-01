@@ -59,7 +59,7 @@
     ]
     [footer :site-footer
       [:shell
-        [span :colophon | © 2026 · built across OpenAI and Anthropic datacenters]
+        [span :colophon | © 2026 Sergey Denisov]
         [:links
           [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
           [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
