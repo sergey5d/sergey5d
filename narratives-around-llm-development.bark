@@ -2,7 +2,7 @@
   [head
     [meta charset=utf-8]
     [meta name=viewport content="width=device-width, initial-scale=1"]
-    [title Hyped Narratives Around LLM Development — Sergey Denisov]
+    [title Exaggerated Narratives Around LLM Development — Sergey Denisov]
     [link rel=icon type=image/png href=icon.png]
     [link rel=stylesheet href=site.css]
     [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
@@ -31,7 +31,7 @@
               all posts
           ]
           [:page-head
-            [h1 :title | Hyped Narratives Around LLM Development]
+            [h1 :title | Exaggerated Narratives Around LLM Development]
             [:post-meta
               [span :tnum | 22 May 2026]
               [span ·]
