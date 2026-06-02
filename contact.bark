@@ -37,21 +37,24 @@
               [span :value
                 [a :link href=mailto:contact@sergeyd.dev | contact@sergeyd.dev]
               ]
-              [a :copy-btn href=mailto:contact@sergeyd.dev | open ↗]
+              [a :action-btn href=mailto:contact@sergeyd.dev | open ↗]
+              [button :copy-btn type=button data-copy=contact@sergeyd.dev | copy]
             ]
             [li
               [span :channel | GitHub]
               [span :value
                 [a :link href=https://github.com/sergey5d rel=noreferrer target=_blank | github.com/sergey5d]
               ]
-              [a :copy-btn href=https://github.com/sergey5d rel=noreferrer target=_blank | open ↗]
+              [a :action-btn href=https://github.com/sergey5d rel=noreferrer target=_blank | open ↗]
+              [button :copy-btn type=button data-copy=https://github.com/sergey5d | copy]
             ]
             [li
               [span :channel | LinkedIn]
               [span :value
                 [a :link href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin.com/in/sadenisov]
               ]
-              [a :copy-btn href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | open ↗]
+              [a :action-btn href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | open ↗]
+              [button :copy-btn type=button data-copy=https://www.linkedin.com/in/sadenisov/ | copy]
             ]
           ]
         ]
@@ -67,6 +70,28 @@
         ]
       ]
     ]
-    [script lucide.createIcons(); // Tiny copy-to-clipboard for buttons with data-copy document.querySelectorAll('button.copy-btn[data-copy]').forEach((btn) => { btn.addEventListener('click', async () => { const text = btn.getAttribute('data-copy'); try { await navigator.clipboard.writeText(text); const original = btn.textContent; btn.textContent = 'copied'; btn.classList.add('is-copied'); setTimeout(() => { btn.textContent = original; btn.classList.remove('is-copied'); }, 1400); } catch (e) { btn.textContent = 'select & copy'; } }); });]
+    [script
+lucide.createIcons();
+
+document.querySelectorAll('button.copy-btn[data-copy]').forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const text = btn.getAttribute('data-copy');
+
+    try {
+      await navigator.clipboard.writeText(text);
+      const original = btn.textContent;
+      btn.textContent = 'copied';
+      btn.classList.add('is-copied');
+
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('is-copied');
+      }, 1400);
+    } catch (e) {
+      btn.textContent = 'select & copy';
+    }
+  });
+});
+]
   ]
 ]

@@ -37,21 +37,24 @@
               <span class="value">
                 <a class="link" href="mailto:contact@sergeyd.dev">contact@sergeyd.dev</a>
               </span>
-              <a class="copy-btn" href="mailto:contact@sergeyd.dev">open ↗</a>
+              <a class="action-btn" href="mailto:contact@sergeyd.dev">open ↗</a>
+              <button class="copy-btn" data-copy="contact@sergeyd.dev" type="button">copy</button>
             </li>
             <li>
               <span class="channel">GitHub</span>
               <span class="value">
                 <a class="link" href="https://github.com/sergey5d" rel="noreferrer" target="_blank">github.com/sergey5d</a>
               </span>
-              <a class="copy-btn" href="https://github.com/sergey5d" rel="noreferrer" target="_blank">open ↗</a>
+              <a class="action-btn" href="https://github.com/sergey5d" rel="noreferrer" target="_blank">open ↗</a>
+              <button class="copy-btn" data-copy="https://github.com/sergey5d" type="button">copy</button>
             </li>
             <li>
               <span class="channel">LinkedIn</span>
               <span class="value">
                 <a class="link" href="https://www.linkedin.com/in/sadenisov/" rel="noreferrer" target="_blank">linkedin.com/in/sadenisov</a>
               </span>
-              <a class="copy-btn" href="https://www.linkedin.com/in/sadenisov/" rel="noreferrer" target="_blank">open ↗</a>
+              <a class="action-btn" href="https://www.linkedin.com/in/sadenisov/" rel="noreferrer" target="_blank">open ↗</a>
+              <button class="copy-btn" data-copy="https://www.linkedin.com/in/sadenisov/" type="button">copy</button>
             </li>
           </ul>
         </div>
@@ -67,6 +70,27 @@
         </div>
       </div>
     </footer>
-    <script>lucide.createIcons(); // Tiny copy-to-clipboard for buttons with data-copy document.querySelectorAll('button.copy-btn[data-copy]').forEach((btn) => { btn.addEventListener('click', async () => { const text = btn.getAttribute('data-copy'); try { await navigator.clipboard.writeText(text); const original = btn.textContent; btn.textContent = 'copied'; btn.classList.add('is-copied'); setTimeout(() => { btn.textContent = original; btn.classList.remove('is-copied'); }, 1400); } catch (e) { btn.textContent = 'select & copy'; } }); });</script>
+    <script>lucide.createIcons();
+
+document.querySelectorAll('button.copy-btn[data-copy]').forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const text = btn.getAttribute('data-copy');
+
+    try {
+      await navigator.clipboard.writeText(text);
+      const original = btn.textContent;
+      btn.textContent = 'copied';
+      btn.classList.add('is-copied');
+
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('is-copied');
+      }, 1400);
+    } catch (e) {
+      btn.textContent = 'select & copy';
+    }
+  });
+});
+</script>
   </body>
 </html>

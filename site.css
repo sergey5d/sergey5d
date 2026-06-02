@@ -746,7 +746,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 
 .contact-list li {
   display: grid;
-  grid-template-columns: 120px 1fr auto;
+  grid-template-columns: 120px 1fr auto auto;
   gap: var(--space-6);
   align-items: center;
   padding: var(--space-4) 0;
@@ -769,6 +769,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 .contact-list .value a { color: var(--cyan-600); }
 .contact-list .value a:hover { color: #a8d1e8; text-decoration: underline; text-underline-offset: 3px; }
 
+.contact-list .action-btn,
 .contact-list .copy-btn {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
@@ -781,7 +782,9 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   letter-spacing: 0.04em;
   transition: all var(--dur) var(--ease-out);
 }
+.contact-list .action-btn:hover,
 .contact-list .copy-btn:hover { color: var(--fg-1); border-color: var(--border-2); background: var(--bg-subtle); }
+.contact-list .action-btn { text-decoration: none; }
 .contact-list .copy-btn.is-copied { color: var(--green-600); border-color: rgba(108, 197, 145, 0.4); }
 
 /* =========================================================================
@@ -945,5 +948,6 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   .projects > li { grid-template-columns: 1fr; }
   .now { grid-template-columns: 1fr; gap: var(--space-3); }
   .contact-list li { grid-template-columns: 100px 1fr; }
+  .contact-list .action-btn,
   .contact-list .copy-btn { grid-column: 1 / -1; justify-self: start; }
 }
