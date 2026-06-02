@@ -1,16 +1,16 @@
 [html lang=en
   [head
     [meta charset=utf-8]
-    [meta name=viewport content="width=device-width, initial-scale=1"]
+    [meta content="width=device-width, initial-scale=1" name=viewport]
     [title Thoughts on debugging — Sergey Denisov]
-    [link rel=icon type=image/png href=icon.png]
-    [link rel=stylesheet href=site.css]
+    [link href=icon.png rel=icon type=image/png]
+    [link href=site.css rel=stylesheet]
     [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
     [header :site-header data-screen-label=Header
       [:shell
-        [a :wordmark href=index.html aria-label=Home
+        [a :wordmark aria-label=Home href=index.html
           [span :dot]
           [span Sergey Denisov]
         ]
@@ -28,7 +28,7 @@
         [:page-stack
           [a :back-link href=blog.html
             [i data-lucide=arrow-left]
-              all posts
+            all posts
           ]
           [:page-head
             [h1 :title | Thoughts on debugging]
@@ -76,8 +76,8 @@
       [:shell
         [span :colophon | © 2026 Sergey Denisov]
         [:links
-          [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
-          [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
+          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | github]
+          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin]
           [a href=contact.html | more →]
         ]
       ]

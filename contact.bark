@@ -1,16 +1,16 @@
 [html lang=en
   [head
     [meta charset=utf-8]
-    [meta name=viewport content="width=device-width, initial-scale=1"]
+    [meta content="width=device-width, initial-scale=1" name=viewport]
     [title Contact — Sergey Denisov]
-    [link rel=icon type=image/png href=icon.png]
-    [link rel=stylesheet href=site.css]
+    [link href=icon.png rel=icon type=image/png]
+    [link href=site.css rel=stylesheet]
     [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
     [header :site-header data-screen-label=Header
       [:shell
-        [a :wordmark href=index.html aria-label=Home
+        [a :wordmark aria-label=Home href=index.html
           [span :dot]
           [span Sergey Denisov]
         ]
@@ -42,16 +42,16 @@
             [li
               [span :channel | GitHub]
               [span :value
-                [a :link href=https://github.com/sergey5d target=_blank rel=noreferrer | github.com/sergey5d]
+                [a :link href=https://github.com/sergey5d rel=noreferrer target=_blank | github.com/sergey5d]
               ]
-              [a :copy-btn href=https://github.com/sergey5d target=_blank rel=noreferrer | open ↗]
+              [a :copy-btn href=https://github.com/sergey5d rel=noreferrer target=_blank | open ↗]
             ]
             [li
               [span :channel | LinkedIn]
               [span :value
-                [a :link href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin.com/in/sadenisov]
+                [a :link href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin.com/in/sadenisov]
               ]
-              [a :copy-btn href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | open ↗]
+              [a :copy-btn href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | open ↗]
             ]
           ]
         ]
@@ -61,8 +61,8 @@
       [:shell
         [span :colophon | © 2026 Sergey Denisov]
         [:links
-          [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
-          [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
+          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | github]
+          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin]
           [a href=index.html | home]
         ]
       ]
