@@ -37,24 +37,30 @@
               [span :value
                 [a :link href=mailto:contact@sergeyd.dev | contact@sergeyd.dev]
               ]
-              [a :action-btn href=mailto:contact@sergeyd.dev | open ↗]
-              [button :copy-btn type=button data-copy=contact@sergeyd.dev | copy]
+              [:contact-actions
+                [a :action-btn href=mailto:contact@sergeyd.dev | open ↗]
+                [button :copy-btn type=button data-copy=contact@sergeyd.dev | copy]
+              ]
             ]
             [li
               [span :channel | GitHub]
               [span :value
                 [a :link href=https://github.com/sergey5d rel=noreferrer target=_blank | github.com/sergey5d]
               ]
-              [a :action-btn href=https://github.com/sergey5d rel=noreferrer target=_blank | open ↗]
-              [button :copy-btn type=button data-copy=https://github.com/sergey5d | copy]
+              [:contact-actions
+                [a :action-btn href=https://github.com/sergey5d rel=noreferrer target=_blank | open ↗]
+                [button :copy-btn type=button data-copy=https://github.com/sergey5d | copy]
+              ]
             ]
             [li
               [span :channel | LinkedIn]
               [span :value
                 [a :link href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin.com/in/sadenisov]
               ]
-              [a :action-btn href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | open ↗]
-              [button :copy-btn type=button data-copy=https://www.linkedin.com/in/sadenisov/ | copy]
+              [:contact-actions
+                [a :action-btn href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | open ↗]
+                [button :copy-btn type=button data-copy=https://www.linkedin.com/in/sadenisov/ | copy]
+              ]
             ]
           ]
         ]
