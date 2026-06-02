@@ -801,7 +801,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   -webkit-appearance: none;
   margin: 0;
 }
-.contact-list .copy-btn.is-copied { color: var(--green-600); border-color: rgba(108, 197, 145, 0.4); }
+.contact-list .copy-btn.is-copied { color: var(--accent-500); border-color: color-mix(in srgb, var(--accent-600) 45%, transparent); }
 
 /* =========================================================================
    INTRO (home)
