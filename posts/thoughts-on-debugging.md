@@ -43,6 +43,6 @@ I think that today, when most languages do not require manual memory management 
 
 And here comes the trouble: of course, if you are relying on step-through debugging, LLM-generated code will make your life extremely hard. But your system is already in an unhealthy state. It either has insufficient test coverage, is not properly modularized, has side effects here and there, has problems with logic, or, most likely, all of these.
 
-So these arguments sound to me more like: we have already reached the boundaries of what we can do with the current system, and pushing beyond them is going to break it. This might be true, but it doesn’t have to be.
+These arguments suggest to me that you may already be approaching the boundaries of what the current system can support, and that pushing beyond them could start to break it. That may be true, but it does not have to be.
 
-On the bright side, adding test coverage has become extremely cheap now. By extension, once your system is properly covered, you can move in the right direction by introducing proper abstractions and refactoring code, which would have been much harder to do prior to LLM code generation.
+On the bright side, adding test coverage has become far less expensive. By extension, once your system is properly covered, you can move in the right direction by introducing proper abstractions and refactoring code, which would have been much harder to do prior to LLM code generation.
