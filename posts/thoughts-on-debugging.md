@@ -9,7 +9,7 @@ category: engineering
 
 In the past few months, there has been a flood of messages from SWEs trying to defend their stance that they are still relevant and their skills are needed in the post-LLM era, where the majority of the code is written by LLMs.
 
-I won’t delve into the arguments of either AI denialists, who state that AI will collapse under the weight of the slop it produces, nor will I defend the side of AI pushers who overstate current LLM abilities.
+I will not get into the arguments of either AI skeptics, who believe the current wave will collapse under the weight of low-quality output, or AI advocates, who often overstate the present capabilities of LLMs.
 
 In this note, I want to discuss a common and recurring theme people raise: that it is impossible to do step-through debugging with LLM-generated code that nobody understands.
 
@@ -19,11 +19,11 @@ What I would like to question here is the assumption that we still need to rely 
 
 It was initially quite surprising to see people seriously discussing the need for step-through debugging, and then I realized I had just forgotten the modus operandi that was valid for me about 5 years ago.
 
-Why was I surprised? Because I rarely do step-through debugging now. And if I ever happen to do it, it is to verify what’s wrong by comparing the output of a specific call against what is expected in unit tests, not to figure out what is happening in the system code.
+Why was I surprised? Because I rarely rely on step-through debugging now. And when I do use it, it is usually to confirm a specific mismatch between the output of a call and what a unit test expects, rather than to understand what is happening in the system code.
 
 How did this change of paradigm - that I’m not doing step-through debugging anymore - happen?
 
-That was due to a mixed set of reasons that shifted my mental paradigm. First, our dev environment was extremely hard to bring up, and every other time something was broken. That, of course, was just a reflection of the constraints of working in a small company with limited resources to make everything right. Thus, in order to bring the system into a runnable state, I had to spend time waiting until all required containers started, and then more time verifying what had gone wrong. This was a real drag on my time, and eventually I started to operate in a “cover every possible scenario, and if something seems broken, write even more unit tests” paradigm.
+That was due to a mixed set of reasons that shifted my mental paradigm. First, running our development environment came with real challenges. It was rough, slow to bring up, and some engineers avoided it altogether, which often led to configuration drift. That was, of course, mostly a reflection of the constraints of working in a small company with limited resources. Thus, in order to bring the system into a runnable state, I had to spend time waiting until all required containers started, and then more time verifying what had gone wrong. This was a real drag on my time, and eventually I started to operate in a “cover every possible scenario, and if something seems broken, write even more unit tests” paradigm.
 
 Another thing that made it unfeasible was just the nature of the system: when you have calls to different microservices in the code you are working on, step-by-step debugging becomes useless. 
 
@@ -45,4 +45,4 @@ And here comes the trouble: of course, if you are relying on step-through debugg
 
 So these arguments sound to me more like: we have already reached the boundaries of what we can do with the current system, and pushing beyond them is going to break it. This might be true, but it doesn’t have to be.
 
-On the bright side, unit tests have become extremely cheap now. By extension, once your system is properly covered, you can move in the right direction by introducing proper abstractions and refactoring code, which would have been much harder to do prior to LLM code generation.
+On the bright side, adding test coverage has become extremely cheap now. By extension, once your system is properly covered, you can move in the right direction by introducing proper abstractions and refactoring code, which would have been much harder to do prior to LLM code generation.

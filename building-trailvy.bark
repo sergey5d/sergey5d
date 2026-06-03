@@ -1,16 +1,16 @@
 [html lang=en
   [head
     [meta charset=utf-8]
-    [meta content="width=device-width, initial-scale=1" name=viewport]
+    [meta name=viewport content="width=device-width, initial-scale=1"]
     [title Building Travelvy.com — Sergey Denisov]
-    [link href=icon.png rel=icon type=image/png]
-    [link href=site.css rel=stylesheet]
+    [link rel=icon type=image/png href=icon.png]
+    [link rel=stylesheet href=site.css]
     [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
   ]
   [body
     [header :site-header data-screen-label=Header
       [:shell
-        [a :wordmark aria-label=Home href=index.html
+        [a :wordmark href=index.html aria-label=Home
           [span :dot]
           [span Sergey Denisov]
         ]
@@ -28,7 +28,7 @@
         [:page-stack
           [a :back-link href=blog.html
             [i data-lucide=arrow-left]
-            all posts
+              all posts
           ]
           [:page-head
             [h1 :title | Building Travelvy.com]
@@ -56,15 +56,9 @@
             [p Eventually we shut it down, but it was a fun and interesting experience.]
             [p Some screenshots:]
             [ul
-              [li
-                [a href=posts/content/trailvy_1.png | Screenshot 1]
-              ]
-              [li
-                [a href=posts/content/trailvy_2.png | Screenshot 2]
-              ]
-              [li
-                [a href=posts/content/trailvy_3.png | Screenshot 3]
-              ]
+              [li [a href=posts/content/trailvy_1.png | Screenshot 1]]
+              [li [a href=posts/content/trailvy_2.png | Screenshot 2]]
+              [li [a href=posts/content/trailvy_3.png | Screenshot 3]]
             ]
           ]
           [script lucide.createIcons();]
@@ -75,8 +69,8 @@
       [:shell
         [span :colophon | © 2026 Sergey Denisov]
         [:links
-          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | github]
-          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin]
+          [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
+          [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
           [a href=contact.html | more →]
         ]
       ]
