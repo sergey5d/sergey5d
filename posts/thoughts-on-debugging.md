@@ -7,13 +7,13 @@ reading_time: 3 min
 category: engineering
 ---
 
-In the past few months, there has been a flood of messages from SWEs trying to defend their stance that they are still relevant and their skills are needed in the post-LLM era, where the majority of the code is written by LLMs.
+In the past few months, there has been a constant stream of messages from software engineers arguing that they are still relevant and that their skills remain necessary in the post-LLM era, where the majority of the code is written by LLMs.
 
 I will not get into the arguments of either AI skeptics, who believe the current wave will collapse under the weight of low-quality output, or AI advocates, who often overstate the present capabilities of LLMs.
 
 In this note, I want to discuss a common and recurring theme people raise: that it is impossible to do step-through debugging with LLM-generated code that nobody understands.
 
-First of all, I do not deny the complexity that LLM-generated code brings to large-system development. Most large code bases follow specific patterns that allow you to navigate through the system based on these anchors and comprehend intent and logic. When LLM-generated code breaks these often loosely defined conventions, it adds another layer of complexity and increases the comprehension burden.
+First of all, I do not deny the complexity that LLM-generated code brings to large-system development. Most large code bases follow specific patterns that allow you to navigate through the system based on these anchors and comprehend intent and logic. When developers do not exercise sufficient oversight over LLM-generated code, it may disregard these often loosely defined conventions and add another layer of complexity, increasing the comprehension burden.
 
 What I would like to question here is the assumption that we still need to rely on step-through debugging.
 

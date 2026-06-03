@@ -41,10 +41,10 @@
             </div>
           </div>
           <div class="prose">
-            <p>In the past few months, there has been a flood of messages from SWEs trying to defend their stance that they are still relevant and their skills are needed in the post-LLM era, where the majority of the code is written by LLMs.</p>
+            <p>In the past few months, there has been a constant stream of messages from software engineers arguing that they are still relevant and that their skills remain necessary in the post-LLM era, where the majority of the code is written by LLMs.</p>
             <p>I will not get into the arguments of either AI skeptics, who believe the current wave will collapse under the weight of low-quality output, or AI advocates, who often overstate the present capabilities of LLMs.</p>
             <p>In this note, I want to discuss a common and recurring theme people raise: that it is impossible to do step-through debugging with LLM-generated code that nobody understands.</p>
-            <p>First of all, I do not deny the complexity that LLM-generated code brings to large-system development. Most large code bases follow specific patterns that allow you to navigate through the system based on these anchors and comprehend intent and logic. When LLM-generated code breaks these often loosely defined conventions, it adds another layer of complexity and increases the comprehension burden.</p>
+            <p>First of all, I do not deny the complexity that LLM-generated code brings to large-system development. Most large code bases follow specific patterns that allow you to navigate through the system based on these anchors and comprehend intent and logic. When developers do not exercise sufficient oversight over LLM-generated code, it may disregard these often loosely defined conventions and add another layer of complexity, increasing the comprehension burden.</p>
             <p>What I would like to question here is the assumption that we still need to rely on step-through debugging.</p>
             <p>It was initially quite surprising to see people seriously discussing the need for step-through debugging, and then I realized I had just forgotten the modus operandi that was valid for me about 5 years ago.</p>
             <p>Why was I surprised? Because I rarely rely on step-through debugging now. And when I do use it, it is usually to confirm a specific mismatch between the output of a call and what a unit test expects, rather than to understand what is happening in the system code.</p>
