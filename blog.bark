@@ -16,7 +16,6 @@
         [nav :nav aria-label=Primary
           [a href=index.html | Home]
           [a href=projects.html | Experience]
-          [a :is-active href=blog.html | Blog]
           [a href=about.html | About]
           [a href=contact.html | Contact]
         ]

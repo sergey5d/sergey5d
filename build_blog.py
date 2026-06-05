@@ -293,7 +293,6 @@ def page_shell(title: str, main_attrs: dict[str, str], main_children: list[str],
     for label, href in [
         ("Home", "index.html"),
         ("Experience", "projects.html"),
-        ("Blog", "blog.html"),
         ("About", "about.html"),
         ("Contact", "contact.html"),
     ]:
@@ -386,7 +385,7 @@ def render_post_page(post: Post) -> list[str]:
         title=f"{post.title} — {SITE_TITLE}",
         main_attrs={"class": "post", "data-screen-label": "Blog post"},
         main_children=main_children,
-        active_nav="Blog",
+        active_nav="",
         include_lucide=True,
     )
 
@@ -464,7 +463,7 @@ def render_blog_index(posts: list[Post]) -> list[str]:
         title=f"Blog — {SITE_TITLE}",
         main_attrs={"data-screen-label": "Blog"},
         main_children=main_children,
-        active_nav="Blog",
+        active_nav="",
         include_lucide=False,
     )
 
