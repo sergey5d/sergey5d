@@ -7,7 +7,7 @@ reading_time: 6 min
 category: engineering
 ---
 
-Update: Anthropic posted a chart on June 4, 2026 indicating that its engineers, on average, "ship 8x as much code per quarter." This does not really refute my argument, since 8x and 100x are quite different numbers.
+Update: Anthropic posted a chart on June 4, 2026 indicating that its engineers, on average, "ship 8x as much code per quarter," which itself does not imply an 8x productivity gain. This does not really refute my argument, since 8x and 100x are quite different numbers.
 
 The common narrative right now is that great engineers are 100x more productive. I truly believe AI is an amplifier of intelligence and productivity, and therefore the gap between the most and least productive engineers has significantly increased.
 
