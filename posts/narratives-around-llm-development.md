@@ -2,7 +2,7 @@
 title: Exaggerated Narratives Around LLM Development
 slug: narratives-around-llm-development
 date: 2026-05-22
-excerpt: AI is absolutely an amplifier, but the loudest productivity narratives around LLM-driven development are based on narrow samples and exaggerated assumptions.
+excerpt: AI is clearly an amplifier, but many productivity narratives around LLM-driven development rely on narrow samples and strong assumptions.
 reading_time: 6 min
 category: engineering
 ---
