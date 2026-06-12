@@ -37,16 +37,6 @@
             ]
             [ul :log
               [li
-                [span :when :tnum | 22 May 2026]
-                [:what
-                  [h3
-                    [a href=narratives-around-llm-development.html | Exaggerated Narratives Around LLM Development]
-                  ]
-                  [span :excerpt | AI is clearly an amplifier, but many productivity narratives around LLM-driven development rely on narrow samples and strong assumptions.]
-                ]
-                [span :kind | 6 min]
-              ]
-              [li
                 [span :when :tnum | 17 May 2026]
                 [:what
                   [h3
