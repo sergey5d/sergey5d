@@ -33,7 +33,7 @@
             [:section-head
               [span :label | // 2026]
               [h2 Recent]
-              [span :count :tnum | 3 posts]
+              [span :count :tnum | 2 posts]
             ]
             [ul :log
               [li
