@@ -16,9 +16,9 @@ BLOG_INDEX_BARK = ROOT / "blog.bark"
 SITE_TITLE = "Sergey Denisov"
 COLLOPHON = "© 2026 Sergey Denisov"
 FOOTER_LINKS = [
-    ("https://github.com/sergey5d", "github"),
-    ("https://www.linkedin.com/in/sadenisov/", "linkedin"),
-    ("contact.html", "more →"),
+    ("https://github.com/sergey5d", "GitHub"),
+    ("https://www.linkedin.com/in/sadenisov/", "LinkedIn"),
+    ("contact.html", "Contact"),
 ]
 
 

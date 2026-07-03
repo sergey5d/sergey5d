@@ -27,8 +27,8 @@
         [:page-stack
           [:page-head
             [:eyebrow | // contact]
-            [h1 :title | Say hello]
-            [p :lede | I read every message and often reply. Recruiters, don't be afraid, I promise I’m friendly.]
+            [h1 :title | Contact]
+            [p :lede | I read every message and usually reply. Email is the best way to reach me for professional opportunities or general questions.]
           ]
           [ul :contact-list
             [li
@@ -69,9 +69,9 @@
       [:shell
         [span :colophon | © 2026 Sergey Denisov]
         [:links
-          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | github]
-          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin]
-          [a href=index.html | home]
+          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | GitHub]
+          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | LinkedIn]
+          [a href=index.html | Home]
         ]
       ]
     ]

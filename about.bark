@@ -26,19 +26,19 @@
       [:shell
         [:page-stack
           [:page-head
-            [:eyebrow | // about]
-            [h1 :title | A few things about me]
-            [p :lede | Some background, for anyone curious how I ended up here.]
+            [:eyebrow | // background]
+            [h1 :title | Background]
+            [p :lede | A few notes on how I got into software and the interests that stayed with me.]
           ]
           [:prose
             [ul :about-list
-              [li I grew up and studied in a mid-sized Russian city in what Russians call the Far East and what most Americans would consider part of Siberia. It was much closer to China than to Moscow.]
+              [li I grew up and studied in a mid-sized Russian city in what Russians call the Far East. It was much closer to China than to Moscow.]
               [li
                 I studied C++ during my first year at university using a book on Borland C++, though I cannot recall the author now. I remember struggling with the three-part
                 [code for]
                 loop for about a week, but once it clicked, everything else felt easy.
               ]
-              [li Later, I learned Java and built a chat application, because chats were the thing at the time. I was not trying to turn it into anything serious; I just wanted to see whether I could build one too. It used applets and AWT, and it had its share of multithreading bugs.]
+              [li Later, I learned Java and built a chat application, because chat applications were popular at the time. I was not trying to turn it into anything serious; I just wanted to see whether I could build one too. It used applets and AWT, and it had its share of multithreading bugs.]
               [li In my twenties, Perl was my favorite language. It was also disappointing to watch Perl 6 arrive so late that it never really gained traction.]
               [li Programming languages have always excited me. I studied many of them over the years. In general most of them are very similar, with Haskell standing out and Prolog remaining a category of its own.]
               [li I am currently learning Spanish, and it turns out learning a third language is much easier than learning a second.]
@@ -54,9 +54,9 @@
       [:shell
         [span :colophon | © 2026 Sergey Denisov]
         [:links
-          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | github]
-          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin]
-          [a href=contact.html | more →]
+          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | GitHub]
+          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | LinkedIn]
+          [a href=contact.html | Contact]
         ]
       ]
     ]

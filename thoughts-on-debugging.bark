@@ -75,9 +75,9 @@
       [:shell
         [span :colophon | © 2026 Sergey Denisov]
         [:links
-          [a href=https://github.com/sergey5d target=_blank rel=noreferrer | github]
-          [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | linkedin]
-          [a href=contact.html | more →]
+          [a href=https://github.com/sergey5d target=_blank rel=noreferrer | GitHub]
+          [a href=https://www.linkedin.com/in/sadenisov/ target=_blank rel=noreferrer | LinkedIn]
+          [a href=contact.html | Contact]
         ]
       ]
     ]

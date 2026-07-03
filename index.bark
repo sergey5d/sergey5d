@@ -26,14 +26,14 @@
       [:shell
         [:page-stack
           [:page-head
-            [:eyebrow | currently · Tampa, FL]
-            [h1 :title | Fighting entropy]
-            [p :lede | Hi. I’m Sergey, a software engineer who spent most of my career building backend systems.]
+            [:eyebrow | Tampa, FL · Remote US]
+            [h1 :title | Staff Backend Engineer]
+            [p :lede | I build backend systems for financial platforms where reliability, correctness, and production stability matter.]
           ]
           [:prose
-            [p I specialize in distributed systems, trading platforms, exchange infrastructure, messaging, and software where reliability matters.]
+            [p Most of my work has focused on distributed systems, trading platforms, exchange infrastructure, messaging, and APIs.]
             [p
-              [a :link href=about.html | A few more things about me →]
+              [a :link href=projects.html | Experience →]
             ]
           ]
         ]
@@ -43,9 +43,9 @@
       [:shell
         [span :colophon | © 2026 Sergey Denisov]
         [:links
-          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | github]
-          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin]
-          [a href=contact.html | more →]
+          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | GitHub]
+          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | LinkedIn]
+          [a href=contact.html | Contact]
         ]
       ]
     ]

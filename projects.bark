@@ -27,8 +27,8 @@
         [:page-stack
           [:page-head
             [:eyebrow | // experience]
-            [h1 :title | Systems, finance, and responsibility]
-            [p :lede | Most of my work has lived in trading, backend-heavy distributed systems, messaging, APIs, and the steady delivery of reliable code.]
+            [h1 :title | Backend systems in finance and trading]
+            [p :lede | Most of my work has centered on trading platforms, distributed systems, APIs, and reliable backend infrastructure.]
           ]
           [section :experience
             [article :experience-item
@@ -126,9 +126,9 @@
       [:shell
         [span :colophon | © 2026 Sergey Denisov]
         [:links
-          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | github]
-          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | linkedin]
-          [a href=contact.html | more →]
+          [a href=https://github.com/sergey5d rel=noreferrer target=_blank | GitHub]
+          [a href=https://www.linkedin.com/in/sadenisov/ rel=noreferrer target=_blank | LinkedIn]
+          [a href=contact.html | Contact]
         ]
       ]
     ]
