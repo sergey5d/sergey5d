@@ -33,10 +33,9 @@
           [:prose
             [p For more than 15 years, I have worked across exchange infrastructure, credit derivatives, order management, settlement, messaging, and APIs. I lead projects from ambiguous requirements through design, delivery, and production ownership.]
             [p Most recently, I was a Staff Software Engineer at Gemini. Before that, I held senior engineering roles at Morgan Stanley and Markit.]
-            [p
-              [a :link href=projects.html | Experience →]
-              ·
-              [a :link href=contact.html | Contact →]
+            [p :home-actions
+              [a :link href=projects.html | Experience]
+              [a :link href=contact.html | Contact]
             ]
           ]
         ]

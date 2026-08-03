@@ -119,10 +119,8 @@ html, body {
   color: var(--fg-2);
   font-family: var(--font-mono);
   font-size: var(--fs-body);
-  font-weight: 450;
+  font-weight: 500;
   line-height: var(--body-lh);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
   margin: 0;
 }
 
@@ -389,6 +387,11 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 .prose em { color: var(--accent-500); font-style: normal; }
 .prose em::before { content: '_'; opacity: 0.6; }
 .prose em::after  { content: '_'; opacity: 0.6; }
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
 .about-list {
   padding-left: 22px;
   margin: 0;
