@@ -28,7 +28,7 @@
           [:page-head
             [:eyebrow | // contact]
             [h1 :title | Contact]
-            [p :lede | I read every message and usually reply. Email is the best way to reach me for professional opportunities or general questions.]
+            [p :lede | I am open to senior and staff-level backend engineering opportunities in the US, particularly in distributed systems and financial infrastructure. Email is the best way to reach me.]
           ]
           [ul :contact-list
             [li

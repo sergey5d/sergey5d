@@ -27,14 +27,14 @@
         <div class="page-stack">
           <div class="page-head">
             <div class="eyebrow">// experience</div>
-            <h1 class="title">Backend systems in finance and trading</h1>
-            <p class="lede">Most of my work has centered on trading platforms, distributed systems, APIs, and reliable backend infrastructure.</p>
+            <h1 class="title">Experience</h1>
+            <p class="lede">More than 15 years building and operating backend systems across crypto exchange infrastructure, credit derivatives, KYC, and financial content platforms.</p>
           </div>
           <section class="experience">
             <article class="experience-item">
               <div class="experience-head">
                 <div>
-                  <h2>Gemini Crypto Exchange</h2>
+                  <h2>Gemini</h2>
                   <p class="experience-role">Staff Software Engineer · Order Management</p>
                 </div>
                 <div class="experience-meta">
@@ -42,22 +42,18 @@
                   <span class="tnum">2022 – Feb 2026</span>
                 </div>
               </div>
-              <p class="experience-summary">Crypto exchange and custodian supporting spot and derivatives trading, equities, and event contracts.</p>
+              <p class="experience-summary">Order management, settlement, and operational systems for a crypto exchange and custodian supporting spot and derivatives trading.</p>
               <p class="experience-env">
-                <strong>Environment:</strong>
-                Scala, Go, Python, TypeScript, React, Kafka, Bazel, gRPC (Protobuf), PostgreSQL, Redis, Kubernetes (EKS), AWS, Terraform, Helm, Docker, Harness, Jenkins, GitHub Actions, Claude Code
+                <strong>Core technologies:</strong>
+                Scala, Go, Kafka, gRPC, PostgreSQL, Redis, Kubernetes, and AWS
               </p>
               <ul class="experience-points">
-                <li>Led a team of 4 engineers; owned execution, code quality, and mentoring.</li>
-                <li>Top-10 GitHub contributor in the company monorepo.</li>
-                <li>Led migration from hardcoded asset and instrument definitions to service-driven dynamic configuration, updating SBE message schemas, evolving database schemas, and modifying large parts of the monorepo while maintaining production stability. Built TypeScript self-serve admin tooling with validation and audit trails so business users could safely manage assets and instruments without engineering involvement.</li>
-                <li>Implemented dynamic instrument restrictions at scale for 5,000 instruments and 300K restrictions: integrated a new restrictions service, introduced business-entity–based rules, added caching for efficient evaluation, and migrated legacy logic. Delivered admin tooling with a React UI and audit history that removed SQL from the restriction update workflow and enabled self-serve availability management. Added Slack notifications for change visibility.</li>
-                <li>Built incentives and leaderboards backend for derivatives trading with reproducible computations, eligibility logic, and auditable outputs: scheduled winner selection, P&amp;L and ROI aggregation, notifications, and REST APIs consumed by the UI.</li>
-                <li>Contributed to Gemini’s Settlement Engine, enabling complex multi-asset clearing between institutional counterparties, and maintained the legacy Gemini Clearing Engine.</li>
-                <li>Improved order lifecycle flows and onboarding by building and maintaining customer-facing REST APIs across order and institutional client pipelines, including ledger interactions for tracking transaction state and account balances.</li>
-                <li>Delivered internal admin tools including bulk credit issuance used for asset delistings and customer offboarding; recognized by department leadership for streamlining operations.</li>
-                <li>Deployed microservices to Kubernetes on EKS by updating Helm charts and releasing via Harness CI/CD. Supported safe rollouts as a release pilot engineer for customer-facing services.</li>
-                <li>Developed and owned Datadog dashboards, monitors, and runbooks for order-ingress pipelines, improving detection and remediation of production issues.</li>
+                <li>Led a team of four engineers, providing technical direction and owning delivery, code quality, mentoring, and production readiness.</li>
+                <li>Led the transition from hardcoded asset and instrument definitions to service-managed configuration across SBE messages, database schemas, and a large monorepo. Delivered validated, audited self-service tooling that removed routine engineering involvement.</li>
+                <li>Designed dynamic restrictions for 5,000 instruments and 300,000 rules, introducing business-entity–based evaluation, caching, migration from legacy logic, and audited self-service administration.</li>
+                <li>Built the backend for derivatives incentives and leaderboards, including reproducible P&amp;L and ROI calculations, eligibility rules, scheduled winner selection, notifications, and APIs.</li>
+                <li>Contributed to multi-asset institutional settlement and improved customer-facing order lifecycle and onboarding flows, including ledger interactions for transaction state and account balances.</li>
+                <li>Owned operational readiness for customer-facing services through safe release practices, Datadog dashboards and monitors, and runbooks for order-ingress pipelines.</li>
               </ul>
             </article>
             <article class="experience-item">
@@ -73,16 +69,16 @@
               </div>
               <p class="experience-summary">Tradeflow: CDS ledger and lifecycle platform for credit derivatives, used by Operations and integrated with client trading and settlement systems across New York, London, and Hong Kong.</p>
               <p class="experience-env">
-                <strong>Environment:</strong>
-                Java 8, Scala, C#, Akka Streams, Kafka, Sybase, Spring, Gradle, Git
+                <strong>Core technologies:</strong>
+                Java, Scala, Akka Streams, Kafka, Sybase, and Spring
               </p>
               <ul class="experience-points">
-                <li>Built a Scala bridge to feed trade data from a legacy Java trading system into a next-generation Scala risk platform using Akka Streams and Kafka.</li>
+                <li>Built a Scala, Akka Streams, and Kafka integration that moved trade data from a legacy Java platform into a next-generation risk system.</li>
                 <li>Delivered Book Move automation for moving thousands to tens of thousands of trades: automated account adjustments, fee-trade generation, and reporting. Implemented a two-phase rollout culminating in redesigned accounting behavior that retained realized payments and moved only unrealized ones, reducing operational risk.</li>
-                <li>Overhauled Credit Event Management tooling for hard credit events: improved trade eligibility discovery, reference entity and portfolio version updates, and fee application. Reduced execution time and eliminated routine developer involvement.</li>
+                <li>Overhauled credit-event tooling by improving trade eligibility discovery, reference-entity and portfolio-version updates, and fee application. Reduced execution time and eliminated routine developer involvement.</li>
                 <li>Re-architected synchronization of back-to-back trades with parent trades; reduced incidents from 2–3 per week to roughly 1–2 every 6 months, with the remaining issues largely unrelated to sync logic.</li>
-                <li>Implemented workflow and state-machine updates for new business requirements, and enhanced trade maturation reporting and batch workflows.</li>
-                <li>Drove stability improvements through server-side support and defect reduction, shifting support rotations from high-volume firefighting to mostly integration-related issues.</li>
+                <li>Delivered workflow and state-machine changes, trade maturation reporting, and batch processing for evolving credit-derivatives requirements.</li>
+                <li>Drove defect reduction and production-stability improvements, shifting support rotations from high-volume firefighting to mostly external integration issues.</li>
               </ul>
             </article>
             <article class="experience-item">
@@ -96,15 +92,15 @@
                   <span class="tnum">2009 – 2015</span>
                 </div>
               </div>
-              <p class="experience-summary">Lead developer on Genpact KYC Services and Markit Hub, spanning secure portals, APIs, SSO, publishing pipelines, partner integrations, and reliability improvements.</p>
+              <p class="experience-summary">Lead engineer for Genpact KYC Services and Markit Hub, spanning secure portals, APIs, SSO, publishing pipelines, partner integrations, and production reliability.</p>
               <p class="experience-env">
-                <strong>Environment:</strong>
-                Java 7, Oracle, Tomcat, Spring Core, Spring MVC, Spring Security, Spring OAuth, Thymeleaf, AngularJS, JavaScript, Maven, Subversion
+                <strong>Core technologies:</strong>
+                Java, Oracle, Tomcat, Spring, OAuth, and AngularJS
               </p>
               <ul class="experience-points">
-                <li>Led development on Genpact KYC Services: a secure portal, API workflows, and integration services for KYC data and subscriptions.</li>
-                <li>Led development on Markit Hub: a financial content aggregation and SSO platform with provider integrations and publishing pipelines across SOAP, CSV, and RSS feeds.</li>
-                <li>Drove platform migrations and reliability improvements across multiple internal and partner-facing services.</li>
+                <li>Led design and delivery for Genpact KYC Services, including a secure portal, API workflows, and integration services for KYC data and subscriptions.</li>
+                <li>Led engineering for Markit Hub, a financial-content aggregation and SSO platform with provider integrations and publishing pipelines across SOAP, CSV, and RSS.</li>
+                <li>Owned platform migrations and reliability improvements across internal and partner-facing services.</li>
               </ul>
             </article>
           </section>

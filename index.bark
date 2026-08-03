@@ -2,7 +2,7 @@
   [head
     [meta charset=utf-8]
     [meta content="width=device-width, initial-scale=1" name=viewport]
-    [title Sergey Denisov — software engineer]
+    [title Sergey Denisov — Staff Backend Engineer]
     [link href=icon.png rel=icon type=image/png]
     [link href=site.css rel=stylesheet]
     [script src=https://unpkg.com/lucide@latest/dist/umd/lucide.min.js]
@@ -28,12 +28,15 @@
           [:page-head
             [:eyebrow | Tampa, FL · Remote US]
             [h1 :title | Staff Backend Engineer]
-            [p :lede | I build backend systems for financial platforms where reliability, correctness, and production stability matter.]
+            [p :lede | I design and build distributed backend systems for trading and financial platforms, with an emphasis on correctness, observability, and production reliability.]
           ]
           [:prose
-            [p Most of my work has focused on distributed systems, trading platforms, exchange infrastructure, messaging, and APIs.]
+            [p For more than 15 years, I have worked across exchange infrastructure, credit derivatives, order management, settlement, messaging, and APIs. I lead projects from ambiguous requirements through design, delivery, and production ownership.]
+            [p Most recently, I was a Staff Software Engineer at Gemini. Before that, I held senior engineering roles at Morgan Stanley and Markit.]
             [p
               [a :link href=projects.html | Experience →]
+              ·
+              [a :link href=contact.html | Contact →]
             ]
           ]
         ]

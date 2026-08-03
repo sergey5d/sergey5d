@@ -449,11 +449,11 @@ def render_blog_index(posts: list[Post]) -> list[str]:
             classes=["page-head"],
             children=
             bark_node("", classes=["eyebrow"], body="// writing")
-            + bark_node("h1", classes=["title"], body="Notes on anything of substance or lack thereof")
+            + bark_node("h1", classes=["title"], body="Writing")
             + bark_node(
                 "p",
                 classes=["lede"],
-                body="Random thoughts about software, systems, AI, and everything else.",
+                body="Notes on software engineering, distributed systems, and AI-assisted development.",
             ),
         )
         + sections,

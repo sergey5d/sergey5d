@@ -26,8 +26,8 @@
         [:page-stack
           [:page-head
             [:eyebrow | // writing]
-            [h1 :title | Notes on anything of substance or lack thereof]
-            [p :lede | Random thoughts about software, systems, AI, and everything else.]
+            [h1 :title | Writing]
+            [p :lede | Notes on software engineering, distributed systems, and AI-assisted development.]
           ]
           [section :section :blog-list-section
             [:section-head
@@ -42,7 +42,7 @@
                   [h3
                     [a href=thoughts-on-debugging.html | Thoughts on debugging]
                   ]
-                  [span :excerpt | Step-through debugging is still useful in some cases, but if it is your normal way of understanding business logic, that may be a sign the system is already in an unhealthy state.]
+                  [span :excerpt | Step-through debugging remains useful, but routine dependence on it can reveal deeper problems with test coverage, modularity, or system boundaries.]
                 ]
                 [span :kind | 3 min]
               ]
@@ -52,7 +52,7 @@
                   [h3
                     [a href=building-trailvy.html | Building Travelvy.com]
                   ]
-                  [span :excerpt | We built this website for travel planning at some point. It was Scala, Cassandra, and some CoffeeScript.]
+                  [span :excerpt | A retrospective on building an early travel-planning product with Scala, Cassandra, Backbone.js, and CoffeeScript.]
                 ]
                 [span :kind | 4 min]
               ]
