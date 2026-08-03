@@ -87,8 +87,8 @@
   /* Shared type scale */
   --fs-xs: 14px;
   --fs-sm: 15px;
-  --fs-md: 17px;
-  --fs-body: 17px;
+  --fs-md: 18px;
+  --fs-body: 18px;
   --fs-lg: 19px;
   --fs-xl: 21px;
   --fs-title: clamp(20px, 3vw, 32px);
@@ -390,7 +390,9 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
 .home-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-6);
+}
+.home-actions a + a {
+  margin-left: var(--space-8);
 }
 .about-list {
   padding-left: 22px;
