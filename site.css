@@ -2,15 +2,7 @@
    Personal site — terminal-flavored, but quiet
    ========================================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
-
-@font-face {
-  font-family: 'Archivo';
-  src: url('fonts/Archivo-Variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
   color-scheme: dark;
@@ -23,7 +15,7 @@
   --bg-overlay:   rgba(0, 0, 0, 0.6);
 
   --fg-1:        #c8cbd0;       /* primary — headings */
-  --fg-2:        #b8bbc0;       /* body */
+  --fg-2:        #c5c9d0;       /* body */
   --fg-3:        #8E9298;       /* secondary */
   --fg-muted:    #767a81;       /* metadata */
   --fg-disabled: #3E4248;
@@ -80,15 +72,15 @@
   --space-6: 24px; --space-8: 32px; --space-12: 48px; --space-16: 64px;
 
   /* Type */
-  --font-mono:  'Archivo', system-ui, sans-serif;
+  --font-mono:  'IBM Plex Sans', system-ui, sans-serif;
   --font-code:  'JetBrains Mono', 'SF Mono', Menlo, monospace;
   --font-sans:  var(--font-mono);
 
   /* Shared type scale */
   --fs-xs: 14px;
   --fs-sm: 15px;
-  --fs-md: 18px;
-  --fs-body: 18px;
+  --fs-md: 17px;
+  --fs-body: 17px;
   --fs-lg: 19px;
   --fs-xl: 21px;
   --fs-title: clamp(20px, 3vw, 32px);
@@ -314,7 +306,7 @@ main { flex: 1 0 auto; padding: var(--space-6) 0 var(--space-16); }
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--fg-1);
-  font-weight: 800;
+  font-weight: 700;
   margin: 0 0 var(--space-6);
   text-wrap: pretty;
 }
